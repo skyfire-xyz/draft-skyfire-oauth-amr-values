@@ -4,16 +4,16 @@
 
 This is the working area for the individual Internet-Draft, "Additional Authentication Method Reference Values".
 
-* [Editor's Copy](https://skyfire-xyz.github.io/draft-skyfire-amr-values/#go.draft-skyfire-amr-values.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-skyfire-amr-values)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-skyfire-amr-values)
-* [Compare Editor's Copy to Individual Draft](https://skyfire-xyz.github.io/draft-skyfire-amr-values/#go.draft-skyfire-amr-values.diff)
+* [Editor's Copy](https://skyfire-xyz.github.io/draft-skyfire-oauth-amr-values/#go.draft-skyfire-oauth-amr-values.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-skyfire-oauth-amr-values)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-skyfire-oauth-amr-values)
+* [Compare Editor's Copy to Individual Draft](https://skyfire-xyz.github.io/draft-skyfire-oauth-amr-values/#go.draft-skyfire-oauth-amr-values.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/skyfire-xyz/draft-skyfire-amr-values/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/blob/main/CONTRIBUTING.md).
 
 The contributing file also has tips on how to make contributions, if you
 don't already know how to do that.
