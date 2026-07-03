@@ -5,12 +5,12 @@
 Network Working Group                                         A. Agarwal
 Internet-Draft                                      Skyfire Systems Inc.
 Intended status: Standards Track                                M. Jones
-Expires: 3 January 2027                           Self-Issued Consulting
-                                                             2 July 2026
+Expires: 4 January 2027                           Self-Issued Consulting
+                                                             3 July 2026
 
 
            Additional Authentication Method Reference Values
-                    draft-skyfire-amr-values-latest
+                 draft-skyfire-oauth-amr-values-latest
 
 Abstract
 
@@ -25,12 +25,12 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at https://skyfire-
-   xyz.github.io/draft-skyfire-amr-values/draft-skyfire-amr-values.html.
-   Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-skyfire-amr-values/.
+   xyz.github.io/draft-skyfire-oauth-amr-values/draft-skyfire-oauth-amr-
+   values.html.  Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-skyfire-oauth-amr-values/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/skyfire-xyz/draft-skyfire-amr-values.
+   https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values.
 
 Status of This Memo
 
@@ -47,7 +47,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2027.
+   This Internet-Draft will expire on 4 January 2027.
 
 Copyright Notice
 
