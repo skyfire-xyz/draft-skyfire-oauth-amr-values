@@ -85,6 +85,10 @@ This specification defines additional Authentication Method Reference values
 to represent these additional
 authentication methods in use today.
 
+While these Authentication Method Reference values are general purpose
+and can be used in any JSON Web Token (JWT) {{RFC7519}},
+one use case for them is use in KYAPay tokens {{?I-D.skyfire-oauth-kyapay-token}}.
+
 
 # Conventions and Definitions
 
