@@ -119,7 +119,7 @@ vid:
 bg:
 : Background Authentication (Silent network authentication of phone number, device recognition, geo-location, etc.)
 
-## "email" (Use of code or link sent to e-mail) Method {#emailMethod}
+## "email" (Code or link sent to e-mail) Method {#emailMethod}
 
 email:
 : Use of code or link sent to e-mail
@@ -184,7 +184,7 @@ established by {{RFC8176}}.
 ### "email" Method
 
 * Authentication Method Reference Name: email
-* Authentication Method Reference Description: Use of code or link sent to e-mail
+* Authentication Method Reference Description: Code or link sent to e-mail
 * Change Controller: IETF
 * Specification Document(s): (#emailMethod) of this specification
 
