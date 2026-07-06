@@ -72,7 +72,7 @@ Table of Contents
      3.2.  "inp" (In-person Authentication) Method
      3.3.  "vid" (Video Authentication) Method
      3.4.  "bg" (Background Authentication) Method
-     3.5.  "email" (Use of code or link sent to e-mail) Method
+     3.5.  "email" (Code or link sent to e-mail) Method
      3.6.  "push" (Push notification to mobile phone) Method
    4.  Security Considerations
    5.  Privacy Considerations
@@ -139,7 +139,7 @@ Table of Contents
    bg:  Background Authentication (Silent network authentication of
       phone number, device recognition, geo-location, etc.)
 
-3.5.  "email" (Use of code or link sent to e-mail) Method
+3.5.  "email" (Code or link sent to e-mail) Method
 
    email:  Use of code or link sent to e-mail
 
@@ -211,8 +211,8 @@ Table of Contents
 
    *  Authentication Method Reference Name: email
 
-   *  Authentication Method Reference Description: Use of code or link
-      sent to e-mail
+   *  Authentication Method Reference Description: Code or link sent to
+      e-mail
 
    *  Change Controller: IETF
 
