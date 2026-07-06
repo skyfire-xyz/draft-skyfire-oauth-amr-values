@@ -99,20 +99,32 @@ one use case for them is use in KYAPay tokens {{?I-D.skyfire-oauth-kyapay-token}
 The following Authentication Method Reference values
 are defined by this specification:
 
+## "app" (Authenticator App) Method {#appMethod}
+
 app:
 : Authenticator App (e.g., Okta Verify, Google Authenticator, Microsoft Authenticator)
+
+## "inp" (In-person Authentication) Method {#inpMethod}
 
 inp:
 : In-person Authentication
 
+## "vid" (Video Authentication) Method {#vidMethod}
+
 vid:
 : Video Authentication (live video interview)
+
+## "bg" (Background Authentication) Method {#bgMethod}
 
 bg:
 : Background Authentication (Silent network authentication of phone number, device recognition, geo-location, etc.)
 
+## "email" (Use of code or link sent to e-mail) Method {#emailMethod}
+
 email:
 : Use of code or link sent to e-mail
+
+## "push" (Push notification to mobile phone) Method {#pushMethod}
 
 push:
 : Push notification to mobile phone
@@ -146,42 +158,42 @@ established by {{RFC8176}}.
 * Authentication Method Reference Name: app
 * Authentication Method Reference Description: Authenticator App
 * Change Controller: IETF
-* Specification Document(s): (#amrValues) of this specification
+* Specification Document(s): (#appMethod) of this specification
 
 ### "inp" Method
 
 * Authentication Method Reference Name: inp
 * Authentication Method Reference Description: In-person Authentication
 * Change Controller: IETF
-* Specification Document(s): (#amrValues) of this specification
+* Specification Document(s): (#inpMethod) of this specification
 
 ### "vid" Method
 
 * Authentication Method Reference Name: vid
 * Authentication Method Reference Description: Video Authentication
 * Change Controller: IETF
-* Specification Document(s): (#amrValues) of this specification
+* Specification Document(s): (#vidMethod) of this specification
 
 ### "bg" Method
 
 * Authentication Method Reference Name: bg
 * Authentication Method Reference Description: Background Authentication
 * Change Controller: IETF
-* Specification Document(s): (#amrValues) of this specification
+* Specification Document(s): (#bgMethod) of this specification
 
 ### "email" Method
 
 * Authentication Method Reference Name: email
 * Authentication Method Reference Description: Use of code or link sent to e-mail
 * Change Controller: IETF
-* Specification Document(s): (#amrValues) of this specification
+* Specification Document(s): (#emailMethod) of this specification
 
 ### "push" Method
 
 * Authentication Method Reference Name: push
 * Authentication Method Reference Description: Push notification to mobile phone
 * Change Controller: IETF
-* Specification Document(s): (#amrValues) of this specification
+* Specification Document(s): (#pushMethod) of this specification
 
 
 --- back
