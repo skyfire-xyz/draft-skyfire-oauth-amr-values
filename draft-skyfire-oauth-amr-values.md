@@ -42,7 +42,7 @@ author:
   organization: Experian
   email: nash.ali@experian.com
 -
-  name: Srini Thumma
+  name: Srinivasa Thumma
   organization: Akamai
   email: sthumma@akamai.com
 
