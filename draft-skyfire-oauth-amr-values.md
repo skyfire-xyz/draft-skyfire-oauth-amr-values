@@ -137,6 +137,21 @@ email:
 push:
 : Push notification to mobile phone
 
+## "facliv" (Facial Recognition with Liveness Check) Method {#faclivMethod}
+
+facliv:
+: Facial Recognition with Liveness Check
+
+## "sqa" (Security Question Answers) Method {#sqaMethod}
+
+sqa:
+: Security Question Answers
+
+## "psk" (Passkey) Method {#pskMethod}
+
+psk:
+: Passkey
+
 
 # Security Considerations
 
@@ -202,6 +217,27 @@ established by {{RFC8176}}.
 * Authentication Method Reference Description: Push notification to mobile phone
 * Change Controller: IETF
 * Specification Document(s): (#pushMethod) of this specification
+
+### "facliv" Method
+
+* Authentication Method Reference Name: facliv
+* Authentication Method Reference Description: Facial Recognition with Liveness Check
+* Change Controller: IETF
+* Specification Document(s): (#faclivMethod) of this specification
+
+### "sqa" Method
+
+* Authentication Method Reference Name: sqa
+* Authentication Method Reference Description: Security Question Answers
+* Change Controller: IETF
+* Specification Document(s): (#sqaMethod) of this specification
+
+### "psk" Method
+
+* Authentication Method Reference Name: psk
+* Authentication Method Reference Description: Passkey
+* Change Controller: IETF
+* Specification Document(s): (#pskMethod) of this specification
 
 
 --- back
