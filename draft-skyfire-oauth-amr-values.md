@@ -112,16 +112,6 @@ are defined by this specification:
 app:
 : Authenticator App (e.g., Okta Verify, Google Authenticator, Microsoft Authenticator)
 
-## "inp" (In-person Authentication) Method {#inpMethod}
-
-inp:
-: In-person Authentication
-
-## "vid" (Video Authentication) Method {#vidMethod}
-
-vid:
-: Video Authentication (live video interview)
-
 ## "bg" (Background Authentication) Method {#bgMethod}
 
 bg:
@@ -182,20 +172,6 @@ established by {{RFC8176}}.
 * Authentication Method Reference Description: Authenticator App
 * Change Controller: IETF
 * Specification Document(s): (#appMethod) of this specification
-
-### "inp" Method
-
-* Authentication Method Reference Name: inp
-* Authentication Method Reference Description: In-person Authentication
-* Change Controller: IETF
-* Specification Document(s): (#inpMethod) of this specification
-
-### "vid" Method
-
-* Authentication Method Reference Name: vid
-* Authentication Method Reference Description: Video Authentication
-* Change Controller: IETF
-* Specification Document(s): (#vidMethod) of this specification
 
 ### "bg" Method
 
