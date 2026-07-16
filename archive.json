@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-14T00:44:07.392172+00:00",
+  "timestamp": "2026-07-16T00:46:11.870923+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -56,24 +56,26 @@
       "id": "PR_kwDOTL-pLM7xSm1p",
       "title": "Add Nash and Srini",
       "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "selfissued",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Cc: @experian-nashali @sthumma33",
       "createdAt": "2026-07-13T22:17:04Z",
-      "updatedAt": "2026-07-13T23:21:44Z",
+      "updatedAt": "2026-07-14T16:20:43Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "5b0fc7979c045f47a71c7fed4d88d4c775999f1d",
       "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "headRefName": "mbj-add-authors",
-      "headRefOid": "91e8d78375283403fbe8a90beb13df7e7b5e4230",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "44a9e40855bb837ab3cbfc6b9900f206988f42e1",
+      "closedAt": "2026-07-14T16:20:43Z",
+      "mergedAt": "2026-07-14T16:20:43Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "fc9a23e1b69030451f90346cd9b1bdb1f3dcc1a6"
+      },
       "comments": [],
       "reviews": [
         {
@@ -87,6 +89,88 @@
           "body": "",
           "createdAt": "2026-07-13T23:21:44Z",
           "updatedAt": "2026-07-13T23:21:44Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABF5iTlg",
+          "commit": {
+            "abbreviatedOid": "91e8d78"
+          },
+          "author": "sthumma33",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-14T04:28:08Z",
+          "updatedAt": "2026-07-14T04:28:08Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "Srinivasa Thumma",
+              "createdAt": "2026-07-14T04:28:08Z",
+              "updatedAt": "2026-07-14T04:28:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABF5lNWg",
+          "commit": {
+            "abbreviatedOid": "91e8d78"
+          },
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-14T04:41:29Z",
+          "updatedAt": "2026-07-14T04:41:29Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "Corrected",
+              "createdAt": "2026-07-14T04:41:29Z",
+              "updatedAt": "2026-07-14T04:41:30Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOTL-pLM7yI5xN",
+      "title": "Three new AMR methods suggested by Nash",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/2",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Cc: @experian-nashali",
+      "createdAt": "2026-07-15T17:18:08Z",
+      "updatedAt": "2026-07-15T22:05:46Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "main",
+      "baseRefOid": "fc9a23e1b69030451f90346cd9b1bdb1f3dcc1a6",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "mbj-3-values-by-nash",
+      "headRefOid": "20567ca55dbd7ffbf0710f5d37ed7a49faeaa099",
+      "closedAt": "2026-07-15T22:05:45Z",
+      "mergedAt": "2026-07-15T22:05:45Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "f90a216dd3d673f54e5d7dc890908c8851aa1c79"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABGIjoVg",
+          "commit": {
+            "abbreviatedOid": "20567ca"
+          },
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-15T17:24:13Z",
+          "updatedAt": "2026-07-15T17:24:13Z",
           "comments": []
         }
       ]
