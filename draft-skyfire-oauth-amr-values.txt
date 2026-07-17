@@ -201,7 +201,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#appMethod) of this specification
+   *  Specification Document(s): Section 3.1 of this specification
 
 6.1.2.  "bg" Method
 
@@ -212,7 +212,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#bgMethod) of this specification
+   *  Specification Document(s): Section 3.2 of this specification
 
 6.1.3.  "email" Method
 
@@ -223,7 +223,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#emailMethod) of this specification
+   *  Specification Document(s): Section 3.3 of this specification
 
 6.1.4.  "call" Method
 
@@ -234,7 +234,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#callMethod) of this specification
+   *  Specification Document(s): Section 3.4 of this specification
 
 6.1.5.  "code" Method
 
@@ -245,7 +245,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#codeMethod) of this specification
+   *  Specification Document(s): Section 3.5 of this specification
 
 6.1.6.  "url" Method
 
@@ -256,7 +256,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#urlMethod) of this specification
+   *  Specification Document(s): Section 3.6 of this specification
 
 6.1.7.  "push" Method
 
@@ -267,7 +267,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#pushMethod) of this specification
+   *  Specification Document(s): Section 3.7 of this specification
 
 6.1.8.  "facliv" Method
 
@@ -278,7 +278,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#faclivMethod) of this specification
+   *  Specification Document(s): Section 3.8 of this specification
 
 6.1.9.  "sqa" Method
 
@@ -289,7 +289,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#sqaMethod) of this specification
+   *  Specification Document(s): Section 3.9 of this specification
 
 6.1.10.  "psk" Method
 
@@ -299,7 +299,7 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): (#pskMethod) of this specification
+   *  Specification Document(s): Section 3.10 of this specification
 
 7.  References
 
