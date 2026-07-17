@@ -122,6 +122,21 @@ bg:
 email:
 : Use of code or link sent to e-mail
 
+## "call" (Voice call providing code) Method {#callMethod}
+
+call:
+: Voice call providing code
+
+## "code" (Code provided to and entered by user) Method {#codeMethod}
+
+code:
+: Code provided to and entered by user
+
+## "url" (URL provided to and clicked on by user) Method {#urlMethod}
+
+url:
+: URL provided to and clicked on by user
+
 ## "push" (Push notification to mobile phone) Method {#pushMethod}
 
 push:
@@ -186,6 +201,27 @@ established by {{RFC8176}}.
 * Authentication Method Reference Description: Code or link sent to e-mail
 * Change Controller: IETF
 * Specification Document(s): (#emailMethod) of this specification
+
+### "call" Method
+
+* Authentication Method Reference Name: call
+* Authentication Method Reference Description: Voice call providing code
+* Change Controller: IETF
+* Specification Document(s): (#callMethod) of this specification
+
+### "code" Method
+
+* Authentication Method Reference Name: code
+* Authentication Method Reference Description: Code provided to and entered by user
+* Change Controller: IETF
+* Specification Document(s): (#codeMethod) of this specification
+
+### "url" Method
+
+* Authentication Method Reference Name: url
+* Authentication Method Reference Description: URL provided to and clicked on by user
+* Change Controller: IETF
+* Specification Document(s): (#urlMethod) of this specification
 
 ### "push" Method
 
