@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-16T00:46:11.870923+00:00",
+  "timestamp": "2026-07-19T00:49:58.588476+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -171,6 +171,90 @@
           "body": "",
           "createdAt": "2026-07-15T17:24:13Z",
           "updatedAt": "2026-07-15T17:24:13Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOTL-pLM7ysV3g",
+      "title": "Remove inp and vid methods",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/3",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Moving to \"inp\" and \"vid\" to ID Verification spec, per today's call.",
+      "createdAt": "2026-07-16T20:18:02Z",
+      "updatedAt": "2026-07-16T23:48:17Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "main",
+      "baseRefOid": "f90a216dd3d673f54e5d7dc890908c8851aa1c79",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "mbj-remove-inp-vid",
+      "headRefOid": "8dad89d9ee91aa2a4a7effd64690d8cb719ade35",
+      "closedAt": "2026-07-16T23:48:17Z",
+      "mergedAt": "2026-07-16T23:48:17Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "e644acad85c0c86d4399d6a54005323b2ea9094a"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABGTqwMg",
+          "commit": {
+            "abbreviatedOid": "8dad89d"
+          },
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-16T22:54:28Z",
+          "updatedAt": "2026-07-16T22:54:28Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOTL-pLM7yzGw2",
+      "title": "Add call, code, and url methods",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/4",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Per input from Nash during our call today",
+      "createdAt": "2026-07-17T03:28:46Z",
+      "updatedAt": "2026-07-17T03:31:14Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "main",
+      "baseRefOid": "e644acad85c0c86d4399d6a54005323b2ea9094a",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "mbj-add-call-code-url",
+      "headRefOid": "d0a5bb175ef9a5fde06754939d6264b0a72fc2c1",
+      "closedAt": "2026-07-17T03:31:14Z",
+      "mergedAt": "2026-07-17T03:31:14Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "3c53cf7813df02f87fe4e60d901a78b8e10a8e30"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABGUhYiw",
+          "commit": {
+            "abbreviatedOid": "d0a5bb1"
+          },
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-17T03:30:16Z",
+          "updatedAt": "2026-07-17T03:30:16Z",
           "comments": []
         }
       ]
