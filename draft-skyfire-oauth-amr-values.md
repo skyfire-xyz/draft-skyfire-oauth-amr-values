@@ -63,9 +63,10 @@ informative:
       - name: Chuck Mortimore
   IANA.AMR:
     author:
-    - name: IANA
+    - org: IANA
     target: https://www.iana.org/assignments/authentication-method-reference-values
     title: Authentication Method Reference Values
+    date: false
 
 ...
 
