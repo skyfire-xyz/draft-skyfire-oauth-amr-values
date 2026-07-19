@@ -5,12 +5,12 @@
 Web Authorization Protocol                                    A. Agarwal
 Internet-Draft                                      Skyfire Systems Inc.
 Intended status: Standards Track                                M. Jones
-Expires: 18 January 2027                          Self-Issued Consulting
+Expires: 20 January 2027                          Self-Issued Consulting
                                                                   N. Ali
                                                                 Experian
                                                                S. Thumma
                                                                   Akamai
-                                                            17 July 2026
+                                                            19 July 2026
 
 
            Additional Authentication Method Reference Values
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 January 2027.
+   This Internet-Draft will expire on 20 January 2027.
 
 Copyright Notice
 
@@ -327,7 +327,7 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-skyfire-
               oauth-kyapay-token-00>.
 
-   [IANA.AMR] IANA, "Authentication Method Reference Values", n.d.,
+   [IANA.AMR] IANA, "Authentication Method Reference Values",
               <https://www.iana.org/assignments/authentication-method-
               reference-values>.
 
