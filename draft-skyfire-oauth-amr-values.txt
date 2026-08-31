@@ -5,12 +5,12 @@
 Web Authorization Protocol                                    A. Agarwal
 Internet-Draft                                      Skyfire Systems Inc.
 Intended status: Standards Track                                M. Jones
-Expires: 20 January 2027                          Self-Issued Consulting
+Expires: 4 March 2027                             Self-Issued Consulting
                                                                   N. Ali
                                                                 Experian
                                                                S. Thumma
                                                                   Akamai
-                                                            19 July 2026
+                                                          31 August 2026
 
 
            Additional Authentication Method Reference Values
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 January 2027.
+   This Internet-Draft will expire on 4 March 2027.
 
 Copyright Notice
 
@@ -135,45 +135,55 @@ Table of Contents
 
 3.1.  "app" (Authenticator App) Method
 
-   app:  Authenticator App (e.g., Okta Verify, Google Authenticator,
+   app:
+      Authenticator App (e.g., Okta Verify, Google Authenticator,
       Microsoft Authenticator)
 
 3.2.  "bg" (Background Authentication) Method
 
-   bg:  Background Authentication (Silent network authentication of
-      phone number, device recognition, geo-location, etc.)
+   bg:
+      Background Authentication (Silent network authentication of phone
+      number, device recognition, geo-location, etc.)
 
 3.3.  "email" (Code or link sent to e-mail) Method
 
-   email:  Use of code or link sent to e-mail
+   email:
+      Use of code or link sent to e-mail
 
 3.4.  "call" (Voice call providing code) Method
 
-   call:  Voice call providing code
+   call:
+      Voice call providing code
 
 3.5.  "code" (Code provided to and entered by user) Method
 
-   code:  Code provided to and entered by user
+   code:
+      Code provided to and entered by user
 
 3.6.  "url" (URL provided to and clicked on by user) Method
 
-   url:  URL provided to and clicked on by user
+   url:
+      URL provided to and clicked on by user
 
 3.7.  "push" (Push notification to mobile phone) Method
 
-   push:  Push notification to mobile phone
+   push:
+      Push notification to mobile phone
 
 3.8.  "facliv" (Facial Recognition with Liveness Check) Method
 
-   facliv:  Facial Recognition with Liveness Check
+   facliv:
+      Facial Recognition with Liveness Check
 
 3.9.  "sqa" (Security Question Answers) Method
 
-   sqa:  Security Question Answers
+   sqa:
+      Security Question Answers
 
 3.10.  "psk" (Passkey) Method
 
-   psk:  Passkey
+   psk:
+      Passkey
 
 4.  Security Considerations
 
@@ -323,9 +333,9 @@ Table of Contents
    [I-D.skyfire-oauth-kyapay-token]
               Agarwal, A. and M. B. Jones, "KYAPay Token", Work in
               Progress, Internet-Draft, draft-skyfire-oauth-kyapay-
-              token-00, 5 July 2026,
+              token-01, 19 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-skyfire-
-              oauth-kyapay-token-00>.
+              oauth-kyapay-token-01>.
 
    [IANA.AMR] IANA, "Authentication Method Reference Values",
               <https://www.iana.org/assignments/authentication-method-
@@ -344,6 +354,10 @@ Table of Contents
 Document History
 
    [[ to be removed by the RFC Editor before publication as an RFC ]]
+
+   -02
+
+   *  Added {:vspace} syntax to definition list entries.
 
    -01
 
