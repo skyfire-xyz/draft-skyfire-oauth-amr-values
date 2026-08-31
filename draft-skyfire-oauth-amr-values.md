@@ -111,51 +111,61 @@ are defined by this specification:
 
 ## "app" (Authenticator App) Method {#appMethod}
 
+{:vspace}
 app:
 : Authenticator App (e.g., Okta Verify, Google Authenticator, Microsoft Authenticator)
 
 ## "bg" (Background Authentication) Method {#bgMethod}
 
+{:vspace}
 bg:
 : Background Authentication (Silent network authentication of phone number, device recognition, geo-location, etc.)
 
 ## "email" (Code or link sent to e-mail) Method {#emailMethod}
 
+{:vspace}
 email:
 : Use of code or link sent to e-mail
 
 ## "call" (Voice call providing code) Method {#callMethod}
 
+{:vspace}
 call:
 : Voice call providing code
 
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
+{:vspace}
 code:
 : Code provided to and entered by user
 
 ## "url" (URL provided to and clicked on by user) Method {#urlMethod}
 
+{:vspace}
 url:
 : URL provided to and clicked on by user
 
 ## "push" (Push notification to mobile phone) Method {#pushMethod}
 
+{:vspace}
 push:
 : Push notification to mobile phone
 
 ## "facliv" (Facial Recognition with Liveness Check) Method {#faclivMethod}
 
+{:vspace}
 facliv:
 : Facial Recognition with Liveness Check
 
 ## "sqa" (Security Question Answers) Method {#sqaMethod}
 
+{:vspace}
 sqa:
 : Security Question Answers
 
 ## "psk" (Passkey) Method {#pskMethod}
 
+{:vspace}
 psk:
 : Passkey
 
@@ -260,6 +270,10 @@ established by {{RFC8176}}.
 {: numbered="false"}
 
 [[ to be removed by the RFC Editor before publication as an RFC ]]
+
+-02
+
+* Added {:vspace} syntax to definition list entries.
 
 -01
 
