@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-30T00:52:50.075209+00:00",
+  "timestamp": "2026-09-01T00:58:29.729512+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -255,6 +255,48 @@
           "body": "",
           "createdAt": "2026-07-17T03:30:16Z",
           "updatedAt": "2026-07-17T03:30:16Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOTL-pLM8AAAABBmKgpw",
+      "title": "Add {:vspace} syntax to definition list entries",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/5",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-08-31T12:04:51Z",
+      "updatedAt": "2026-08-31T14:49:23Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "main",
+      "baseRefOid": "7d6831b3e46676911cdf4d96985abdbb7ba80a94",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "mbj-vspace",
+      "headRefOid": "bf29b558f2849ab2eb92a0b0a309a6c814a24b50",
+      "closedAt": "2026-08-31T14:49:23Z",
+      "mergedAt": "2026-08-31T14:49:23Z",
+      "mergedBy": "skyfire-ankit",
+      "mergeCommit": {
+        "oid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABLhE_aw",
+          "commit": {
+            "abbreviatedOid": "bf29b55"
+          },
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "lgtm",
+          "createdAt": "2026-08-31T14:49:07Z",
+          "updatedAt": "2026-08-31T14:49:07Z",
           "comments": []
         }
       ]
