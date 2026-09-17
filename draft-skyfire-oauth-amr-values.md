@@ -262,6 +262,14 @@ established by {{RFC8176}}.
 
 --- back
 
+# Acknowledgments
+{: numbered="false"}
+
+We would like to thank
+Jean Diaconu
+for his contributions to the specification.
+
+
 # Document History
 {: numbered="false"}
 
