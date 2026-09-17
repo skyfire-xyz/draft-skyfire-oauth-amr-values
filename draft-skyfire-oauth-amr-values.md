@@ -68,6 +68,12 @@ informative:
     target: https://www.iana.org/assignments/authentication-method-reference-values
     title: Authentication Method Reference Values
     date: false
+  SP800-63-4:
+    target: https://pages.nist.gov/800-63-4/sp800-63.html
+    title: "NIST SP 800-63-4: Digital Identity Guidelines"
+    author:
+    - org: National Institute of Standards (NIST)
+    date: July 2025
 
 ...
 
@@ -127,12 +133,6 @@ bg:
 email:
 : Use of code or link sent to e-mail
 
-## "call" (Voice call providing code) Method {#callMethod}
-
-{:vspace}
-call:
-: Voice call providing code
-
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
 {:vspace}
@@ -163,10 +163,10 @@ facliv:
 sqa:
 : Security Question Answers
 
-## "psk" (Passkey) Method {#pskMethod}
+## "passkey" (Passkey) Method {#passkeyMethod}
 
 {:vspace}
-psk:
+passkey:
 : Passkey
 
 
@@ -175,6 +175,9 @@ psk:
 The security considerations defined in
 Authentication Method Reference Values {{RFC8176}}
 apply to this specification.
+
+Note that security questions are not acceptable authentication secrets
+under current NIST guidance {{SP800-63-4}}.
 
 
 # Privacy Considerations
@@ -214,13 +217,6 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{emailMethod}} of this specification
 
-### "call" Method
-
-* Authentication Method Reference Name: call
-* Authentication Method Reference Description: Voice call providing code
-* Change Controller: IETF
-* Specification Document(s): {{callMethod}} of this specification
-
 ### "code" Method
 
 * Authentication Method Reference Name: code
@@ -256,12 +252,12 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{sqaMethod}} of this specification
 
-### "psk" Method
+### "passkey" Method
 
-* Authentication Method Reference Name: psk
+* Authentication Method Reference Name: passkey
 * Authentication Method Reference Description: Passkey
 * Change Controller: IETF
-* Specification Document(s): {{pskMethod}} of this specification
+* Specification Document(s): {{passkeyMethod}} of this specification
 
 
 --- back
@@ -273,6 +269,9 @@ established by {{RFC8176}}.
 
 -02
 
+* Removed "call" since it's a duplicate of "tel".
+* Renamed "psk" to "passkey" because of the potential confusion with pre-shared key.
+* Added warning in Security Considerations that security questions are not acceptable authentication secrets under current NIST guidance.
 * Added {:vspace} syntax to definition list entries.
 
 -01
