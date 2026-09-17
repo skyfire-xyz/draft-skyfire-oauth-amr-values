@@ -97,6 +97,7 @@ Table of Contents
    7.  References
      7.1.  Normative References
      7.2.  Informative References
+   Acknowledgments
    Document History
    Authors' Addresses
 
@@ -340,6 +341,11 @@ Table of Contents
               National Institute of Standards (NIST), "NIST SP 800-63-4:
               Digital Identity Guidelines", July 2025,
               <https://pages.nist.gov/800-63-4/sp800-63.html>.
+
+Acknowledgments
+
+   We would like to thank Jean Diaconu for his contributions to the
+   specification.
 
 Document History
 
