@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-17T00:48:26.471067+00:00",
+  "timestamp": "2026-09-20T00:53:31.858646+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -49,7 +49,24 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 6,
+      "id": "I_kwDOTL-pLM8AAAABRyui8w",
+      "title": "Add references for \"amr\" value definitions",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/issues/6",
+      "state": "OPEN",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@jadiaconu's review included:\n> [Claude]\n> 4. Every description is unsourced, a regression from RFC 8176, which anchored all 21 values in external definitions.\n",
+      "createdAt": "2026-09-17T14:50:24Z",
+      "updatedAt": "2026-09-17T14:50:24Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": [
     {
       "number": 1,
@@ -300,6 +317,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOTL-pLM8AAAABD8yYHw",
+      "title": "Address Jean Diaconu's review comments",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/7",
+      "state": "OPEN",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "cc: @jadiaconu",
+      "createdAt": "2026-09-17T15:11:06Z",
+      "updatedAt": "2026-09-17T17:11:58Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "main",
+      "baseRefOid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "mbj-jean",
+      "headRefOid": "742f3d67e689095b33d947d545f35d93c94c8f4f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
