@@ -267,7 +267,9 @@ established by {{RFC8176}}.
 
 We would like to thank
 Jean Diaconu
-for his contributions to the specification.
+and
+Rob Zagarella
+for their contributions to the specification.
 
 
 # Document History
