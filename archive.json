@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-20T00:53:31.858646+00:00",
+  "timestamp": "2026-09-22T00:48:35.826778+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -63,6 +63,22 @@
       "body": "@jadiaconu's review included:\n> [Claude]\n> 4. Every description is unsourced, a regression from RFC 8176, which anchored all 21 values in external definitions.\n",
       "createdAt": "2026-09-17T14:50:24Z",
       "updatedAt": "2026-09-17T14:50:24Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOTL-pLM8AAAABSRnKQA",
+      "title": "Describe overlaps between values and what to do when overlapping values apply",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/issues/8",
+      "state": "OPEN",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@Schemo512 suggested in his review suggests adding:\n> a one-line note per value\n> stating whether it specialises, extends, or is disjoint from the existing\n> value would answer that question before it is asked, and would tell\n> implementers like us which one to emit when both apply\n\nI agree that this would improve the specification and help implementers, and plan to do this.",
+      "createdAt": "2026-09-21T00:19:35Z",
+      "updatedAt": "2026-09-21T00:19:35Z",
       "closedAt": null,
       "comments": []
     }
@@ -330,18 +346,26 @@
       "labels": [],
       "body": "cc: @jadiaconu",
       "createdAt": "2026-09-17T15:11:06Z",
-      "updatedAt": "2026-09-17T17:11:58Z",
+      "updatedAt": "2026-09-21T00:40:42Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52",
       "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "headRefName": "mbj-jean",
-      "headRefOid": "742f3d67e689095b33d947d545f35d93c94c8f4f",
+      "headRefOid": "569f9e0a54cf34ebf1212159f189e8fea4bef192",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Cc: @Schemo512",
+          "createdAt": "2026-09-21T00:40:42Z",
+          "updatedAt": "2026-09-21T00:40:42Z"
+        }
+      ],
       "reviews": []
     }
   ]
