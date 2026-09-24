@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-22T00:48:35.826778+00:00",
+  "timestamp": "2026-09-24T00:47:55.606738+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -346,7 +346,7 @@
       "labels": [],
       "body": "cc: @jadiaconu",
       "createdAt": "2026-09-17T15:11:06Z",
-      "updatedAt": "2026-09-21T00:40:42Z",
+      "updatedAt": "2026-09-22T09:49:03Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52",
@@ -366,7 +366,21 @@
           "updatedAt": "2026-09-21T00:40:42Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABOoBgoA",
+          "commit": {
+            "abbreviatedOid": "569f9e0"
+          },
+          "author": "jadiaconu",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-09-22T09:49:03Z",
+          "updatedAt": "2026-09-22T09:49:03Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
