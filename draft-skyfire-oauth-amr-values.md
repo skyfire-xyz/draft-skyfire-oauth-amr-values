@@ -50,6 +50,7 @@ normative:
   RFC8176:
 
 informative:
+  RFC4949:
   RFC7519:
   I-D.skyfire-oauth-kyapay-token:
   OpenID.Core:
@@ -132,6 +133,13 @@ bg:
 {:vspace}
 email:
 : Use of code or link sent to e-mail
+
+## "call" (Voice call providing code) Method {#callMethod}
+
+{:vspace}
+call:
+: Voice call providing code used in another channel.
+  Note that this differs from "tel", which is "call back" as defined in {{RFC4949}}.
 
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
@@ -217,6 +225,13 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{emailMethod}} of this specification
 
+### "call" Method
+
+* Authentication Method Reference Name: call
+* Authentication Method Reference Description: Voice call providing code
+* Change Controller: IETF
+* Specification Document(s): {{callMethod}} of this specification
+
 ### "code" Method
 
 * Authentication Method Reference Name: code
@@ -279,7 +294,7 @@ for their contributions to the specification.
 
 -02
 
-* Removed "call" since it's a duplicate of "tel".
+* Described difference between "call" and "tel".
 * Renamed "psk" to "passkey" because of the potential confusion with pre-shared key.
 * Added warning in Security Considerations that security questions are not acceptable authentication secrets under current NIST guidance.
 * Added {:vspace} syntax to definition list entries.
