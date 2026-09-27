@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-24T00:47:55.606738+00:00",
+  "timestamp": "2026-09-27T00:56:07.545798+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -346,13 +346,13 @@
       "labels": [],
       "body": "cc: @jadiaconu",
       "createdAt": "2026-09-17T15:11:06Z",
-      "updatedAt": "2026-09-22T09:49:03Z",
+      "updatedAt": "2026-09-26T00:39:18Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52",
       "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "headRefName": "mbj-jean",
-      "headRefOid": "569f9e0a54cf34ebf1212159f189e8fea4bef192",
+      "headRefOid": "7a271e44a418e6b589a23b2ac1977a8c2529ea3f",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -379,6 +379,32 @@
           "createdAt": "2026-09-22T09:49:03Z",
           "updatedAt": "2026-09-22T09:49:03Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABPSsi9Q",
+          "commit": {
+            "abbreviatedOid": "569f9e0"
+          },
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Asked for a few changes.",
+          "createdAt": "2026-09-25T18:25:19Z",
+          "updatedAt": "2026-09-25T18:29:04Z",
+          "comments": [
+            {
+              "originalPosition": 56,
+              "body": "Enhance the description: Voice call to the registered phone number of the human principal, providing the TOTP code that the human principal provides to the system as a second factor for authentication.",
+              "createdAt": "2026-09-25T18:25:19Z",
+              "updatedAt": "2026-09-25T18:29:05Z"
+            },
+            {
+              "originalPosition": 53,
+              "body": "I'd push back on this deletion\n\nRFC 8176's `tel` claims equivalence to `call back` from RFC 4949 which defines `call back` as:\n\n(I) An authentication technique for terminals that remotely access\n      a computer via telephone lines; the host system disconnects the\n      caller and then reconnects on a telephone number that was\n      previously authorized for that terminal.\n\nThe above seems geared towards dial up access to systems as opposed to the intent of `call` here which is \"Voice call to the registered phone number of the human principal, providing the TOTP code that the human principal provides to the system as a second factor for authentication.\"",
+              "createdAt": "2026-09-25T18:28:20Z",
+              "updatedAt": "2026-09-25T18:29:05Z"
+            }
+          ]
         }
       ]
     }
