@@ -4,13 +4,13 @@
 
 Web Authorization Protocol                                    A. Agarwal
 Internet-Draft                                      Skyfire Systems Inc.
-Intended status: Standards Track                                M. Jones
-Expires: 30 March 2027                            Self-Issued Consulting
-                                                                  N. Ali
+Updates: 8176 (if approved)                                     M. Jones
+Intended status: Standards Track                  Self-Issued Consulting
+Expires: 2 April 2027                                             N. Ali
                                                                 Experian
                                                                S. Thumma
                                                                   Akamai
-                                                       26 September 2026
+                                                       29 September 2026
 
 
            Additional Authentication Method Reference Values
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 March 2027.
+   This Internet-Draft will expire on 2 April 2027.
 
 Copyright Notice
 
@@ -75,30 +75,31 @@ Table of Contents
      3.1.  "app" (Authenticator App) Method
      3.2.  "bg" (Background Authentication) Method
      3.3.  "email" (Code or link sent to e-mail) Method
-     3.4.  "call" (Voice call providing code) Method
-     3.5.  "code" (Code provided to and entered by user) Method
-     3.6.  "url" (URL provided to and clicked on by user) Method
-     3.7.  "push" (Push notification to mobile phone) Method
-     3.8.  "facliv" (Facial Recognition with Liveness Check) Method
-     3.9.  "sqa" (Security Question Answers) Method
-     3.10. "passkey" (Passkey) Method
-   4.  Security Considerations
-   5.  Privacy Considerations
-   6.  IANA Considerations
-     6.1.  Authentication Method References Registry
-       6.1.1.  "app" Method
-       6.1.2.  "bg" Method
-       6.1.3.  "email" Method
-       6.1.4.  "call" Method
-       6.1.5.  "code" Method
-       6.1.6.  "url" Method
-       6.1.7.  "push" Method
-       6.1.8.  "facliv" Method
-       6.1.9.  "sqa" Method
-       6.1.10. "passkey" Method
-   7.  References
-     7.1.  Normative References
-     7.2.  Informative References
+     3.4.  "code" (Code provided to and entered by user) Method
+     3.5.  "url" (URL provided to and clicked on by user) Method
+     3.6.  "push" (Push notification to mobile phone) Method
+     3.7.  "facliv" (Facial Recognition with Liveness Check) Method
+     3.8.  "sqa" (Security Question Answers) Method
+     3.9.  "passkey" (Passkey) Method
+   4.  Updated Authentication Method Reference Value
+     4.1.  "tel" (Telephone Call) Method
+   5.  Security Considerations
+   6.  Privacy Considerations
+   7.  IANA Considerations
+     7.1.  Authentication Method References Registry
+       7.1.1.  "app" Method
+       7.1.2.  "bg" Method
+       7.1.3.  "email" Method
+       7.1.4.  "code" Method
+       7.1.5.  "url" Method
+       7.1.6.  "push" Method
+       7.1.7.  "facliv" Method
+       7.1.8.  "sqa" Method
+       7.1.9.  "passkey" Method
+       7.1.10. "tel" Method
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Acknowledgments
    Document History
    Authors' Addresses
@@ -151,43 +152,56 @@ Table of Contents
    email:
       Use of code or link sent to e-mail
 
-3.4.  "call" (Voice call providing code) Method
-
-   call:
-      Voice call providing code used in another channel.  Note that this
-      differs from "tel", which is "call back" as defined in [RFC4949].
-
-3.5.  "code" (Code provided to and entered by user) Method
+3.4.  "code" (Code provided to and entered by user) Method
 
    code:
       Code provided to and entered by user
 
-3.6.  "url" (URL provided to and clicked on by user) Method
+3.5.  "url" (URL provided to and clicked on by user) Method
 
    url:
       URL provided to and clicked on by user
 
-3.7.  "push" (Push notification to mobile phone) Method
+3.6.  "push" (Push notification to mobile phone) Method
 
    push:
       Push notification to mobile phone
 
-3.8.  "facliv" (Facial Recognition with Liveness Check) Method
+3.7.  "facliv" (Facial Recognition with Liveness Check) Method
 
    facliv:
       Facial Recognition with Liveness Check
 
-3.9.  "sqa" (Security Question Answers) Method
+3.8.  "sqa" (Security Question Answers) Method
 
    sqa:
       Security Question Answers
 
-3.10.  "passkey" (Passkey) Method
+3.9.  "passkey" (Passkey) Method
 
    passkey:
       Passkey
 
-4.  Security Considerations
+4.  Updated Authentication Method Reference Value
+
+   The following Authentication Method Reference value is updated by
+   this specification:
+
+4.1.  "tel" (Telephone Call) Method
+
+   tel:
+      Telephone call to the user at a registered number.  The call may
+      be used to provide information to the user, such as a code, that
+      is then used in another channel.  The call may be used for the
+      user to provide information that the caller uses in the
+      authentication.
+
+   This definition replaces the one in [RFC8176], which is "Confirmation
+   by telephone call to the user at a registered number.  This
+   authentication technique is sometimes also referred to as 'call back'
+   [RFC4949]."
+
+5.  Security Considerations
 
    The security considerations defined in Authentication Method
    Reference Values [RFC8176] apply to this specification.
@@ -195,20 +209,20 @@ Table of Contents
    Note that security questions are not acceptable authentication
    secrets under current NIST guidance [SP800-63-4].
 
-5.  Privacy Considerations
+6.  Privacy Considerations
 
    The privacy considerations defined in Authentication Method Reference
    Values [RFC8176] apply to this specification.
 
-6.  IANA Considerations
+7.  IANA Considerations
 
-6.1.  Authentication Method References Registry
+7.1.  Authentication Method References Registry
 
    This specification registers the following Authentication Method
    Reference values in the IANA "Authentication Method Reference Values"
    registry [IANA.AMR] established by [RFC8176].
 
-6.1.1.  "app" Method
+7.1.1.  "app" Method
 
    *  Authentication Method Reference Name: app
 
@@ -218,7 +232,7 @@ Table of Contents
 
    *  Specification Document(s): Section 3.1 of this specification
 
-6.1.2.  "bg" Method
+7.1.2.  "bg" Method
 
    *  Authentication Method Reference Name: bg
 
@@ -229,7 +243,7 @@ Table of Contents
 
    *  Specification Document(s): Section 3.2 of this specification
 
-6.1.3.  "email" Method
+7.1.3.  "email" Method
 
    *  Authentication Method Reference Name: email
 
@@ -240,18 +254,7 @@ Table of Contents
 
    *  Specification Document(s): Section 3.3 of this specification
 
-6.1.4.  "call" Method
-
-   *  Authentication Method Reference Name: call
-
-   *  Authentication Method Reference Description: Voice call providing
-      code
-
-   *  Change Controller: IETF
-
-   *  Specification Document(s): Section 3.4 of this specification
-
-6.1.5.  "code" Method
+7.1.4.  "code" Method
 
    *  Authentication Method Reference Name: code
 
@@ -260,9 +263,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.5 of this specification
+   *  Specification Document(s): Section 3.4 of this specification
 
-6.1.6.  "url" Method
+7.1.5.  "url" Method
 
    *  Authentication Method Reference Name: url
 
@@ -271,9 +274,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.6 of this specification
+   *  Specification Document(s): Section 3.5 of this specification
 
-6.1.7.  "push" Method
+7.1.6.  "push" Method
 
    *  Authentication Method Reference Name: push
 
@@ -282,9 +285,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.7 of this specification
+   *  Specification Document(s): Section 3.6 of this specification
 
-6.1.8.  "facliv" Method
+7.1.7.  "facliv" Method
 
    *  Authentication Method Reference Name: facliv
 
@@ -293,9 +296,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.8 of this specification
+   *  Specification Document(s): Section 3.7 of this specification
 
-6.1.9.  "sqa" Method
+7.1.8.  "sqa" Method
 
    *  Authentication Method Reference Name: sqa
 
@@ -304,9 +307,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.9 of this specification
+   *  Specification Document(s): Section 3.8 of this specification
 
-6.1.10.  "passkey" Method
+7.1.9.  "passkey" Method
 
    *  Authentication Method Reference Name: passkey
 
@@ -314,11 +317,22 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.10 of this specification
+   *  Specification Document(s): Section 3.9 of this specification
 
-7.  References
+7.1.10.  "tel" Method
 
-7.1.  Normative References
+   *  Authentication Method Reference Name: tel
+
+   *  Authentication Method Reference Description: Telephone call to the
+      user at a registered number
+
+   *  Change Controller: IETF
+
+   *  Specification Document(s): Section 4.1 of this specification
+
+8.  References
+
+8.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -333,7 +347,7 @@ Table of Contents
               Method Reference Values", RFC 8176, DOI 10.17487/RFC8176,
               June 2017, <https://www.rfc-editor.org/rfc/rfc8176>.
 
-7.2.  Informative References
+8.2.  Informative References
 
    [I-D.skyfire-oauth-kyapay-token]
               Agarwal, A. and M. B. Jones, "KYAPay Token", Work in
@@ -376,7 +390,8 @@ Document History
 
    -02
 
-   *  Described difference between "call" and "tel".
+   *  Updated the definition of "tel" to incorporate calls to provide
+      information such as codes.
 
    *  Renamed "psk" to "passkey" because of the potential confusion with
       pre-shared key.
