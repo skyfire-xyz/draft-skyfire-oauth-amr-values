@@ -11,6 +11,7 @@ consensus: true
 v: 3
 area: Security
 workgroup: Web Authorization Protocol
+updates: 8176
 keyword:
  - agent
  - identity
@@ -134,13 +135,6 @@ bg:
 email:
 : Use of code or link sent to e-mail
 
-## "call" (Voice call providing code) Method {#callMethod}
-
-{:vspace}
-call:
-: Voice call providing code used in another channel.
-  Note that this differs from "tel", which is "call back" as defined in {{RFC4949}}.
-
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
 {:vspace}
@@ -176,6 +170,25 @@ sqa:
 {:vspace}
 passkey:
 : Passkey
+
+
+# Updated Authentication Method Reference Value {#amrUpdates}
+
+The following Authentication Method Reference value
+is updated by this specification:
+
+## "tel" (Telephone Call) Method {#telMethod}
+
+{:vspace}
+tel:
+: Telephone call to the user at a registered number.
+  The call may be used to provide information to the user, such as a code, that is then used in another channel.
+  The call may be used for the user to provide information that the caller uses in the authentication.
+
+This definition replaces the one in {{RFC8176}}, which is
+"Confirmation by telephone call to the user at a registered number.
+This authentication technique is sometimes also referred to as
+'call back' {{RFC4949}}."
 
 
 # Security Considerations
@@ -225,13 +238,6 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{emailMethod}} of this specification
 
-### "call" Method
-
-* Authentication Method Reference Name: call
-* Authentication Method Reference Description: Voice call providing code
-* Change Controller: IETF
-* Specification Document(s): {{callMethod}} of this specification
-
 ### "code" Method
 
 * Authentication Method Reference Name: code
@@ -274,6 +280,13 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{passkeyMethod}} of this specification
 
+### "tel" Method
+
+* Authentication Method Reference Name: tel
+* Authentication Method Reference Description: Telephone call to the user at a registered number
+* Change Controller: IETF
+* Specification Document(s): {{telMethod}} of this specification
+
 
 --- back
 
@@ -294,7 +307,7 @@ for their contributions to the specification.
 
 -02
 
-* Described difference between "call" and "tel".
+* Updated the definition of "tel" to incorporate calls to provide information such as codes.
 * Renamed "psk" to "passkey" because of the potential confusion with pre-shared key.
 * Added warning in Security Considerations that security questions are not acceptable authentication secrets under current NIST guidance.
 * Added {:vspace} syntax to definition list entries.
