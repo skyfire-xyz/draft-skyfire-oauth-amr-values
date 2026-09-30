@@ -16,7 +16,7 @@ This specification defines additional Authentication Method Reference values
 beyond those already registered to represent additional
 authentication methods in use today. 
     ' name="description">
-<meta content="xml2rfc 3.34.0" name="generator">
+<meta content="xml2rfc 3.34.1" name="generator">
 <meta content="agent" name="keyword">
 <meta content="identity" name="keyword">
 <meta content="agentic" name="keyword">
@@ -24,19 +24,19 @@ authentication methods in use today.
 <meta content="commerce" name="keyword">
 <meta content="draft-skyfire-oauth-amr-values-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.34.0
+  xml2rfc 3.34.1
     Python 3.14.7
-    ConfigArgParse 1.7.5
+    ConfigArgParse 1.7.7
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.11.5
+    platformdirs 4.11.10
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.2
+    wcwidth 0.8.4
 -->
 <link href="draft-skyfire-oauth-amr-values.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1052,11 +1052,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Additional AMR Values</td>
-<td class="right">August 2026</td>
+<td class="right">September 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Agarwal, et al.</td>
-<td class="center">Expires 4 March 2027</td>
+<td class="center">Expires 3 April 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,14 +1067,17 @@ svg {
 <dd class="workgroup">Web Authorization Protocol</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-skyfire-oauth-amr-values-latest</dd>
+<dt class="label-updates">Updates:</dt>
+<dd class="updates">
+<a href="https://www.rfc-editor.org/rfc/rfc8176" class="eref">8176</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-08-31" class="published">31 August 2026</time>
+<time datetime="2026-09-30" class="published">30 September 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-03-04">4 March 2027</time></dd>
+<dd class="expires"><time datetime="2027-04-03">3 April 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1135,7 +1138,7 @@ authentication methods in use today.<a href="#section-abstract-1" class="pilcrow
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 March 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1183,90 +1186,98 @@ authentication methods in use today.<a href="#section-abstract-1" class="pilcrow
                 <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-email-code-or-link-sent-to-" class="internal xref">"email" (Code or link sent to e-mail) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.4">
-                <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="auto internal xref">3.4</a>.  <a href="#name-call-voice-call-providing-c" class="internal xref">"call" (Voice call providing code) Method</a></p>
+                <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="auto internal xref">3.4</a>.  <a href="#name-code-code-provided-to-and-e" class="internal xref">"code" (Code provided to and entered by user) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.5">
-                <p id="section-toc.1-1.3.2.5.1"><a href="#section-3.5" class="auto internal xref">3.5</a>.  <a href="#name-code-code-provided-to-and-e" class="internal xref">"code" (Code provided to and entered by user) Method</a></p>
+                <p id="section-toc.1-1.3.2.5.1"><a href="#section-3.5" class="auto internal xref">3.5</a>.  <a href="#name-url-url-provided-to-and-cli" class="internal xref">"url" (URL provided to and clicked on by user) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.6">
-                <p id="section-toc.1-1.3.2.6.1"><a href="#section-3.6" class="auto internal xref">3.6</a>.  <a href="#name-url-url-provided-to-and-cli" class="internal xref">"url" (URL provided to and clicked on by user) Method</a></p>
+                <p id="section-toc.1-1.3.2.6.1"><a href="#section-3.6" class="auto internal xref">3.6</a>.  <a href="#name-push-push-notification-to-m" class="internal xref">"push" (Push notification to mobile phone) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.7">
-                <p id="section-toc.1-1.3.2.7.1"><a href="#section-3.7" class="auto internal xref">3.7</a>.  <a href="#name-push-push-notification-to-m" class="internal xref">"push" (Push notification to mobile phone) Method</a></p>
+                <p id="section-toc.1-1.3.2.7.1"><a href="#section-3.7" class="auto internal xref">3.7</a>.  <a href="#name-facliv-facial-recognition-w" class="internal xref">"facliv" (Facial Recognition with Liveness Check) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.8">
-                <p id="section-toc.1-1.3.2.8.1"><a href="#section-3.8" class="auto internal xref">3.8</a>.  <a href="#name-facliv-facial-recognition-w" class="internal xref">"facliv" (Facial Recognition with Liveness Check) Method</a></p>
+                <p id="section-toc.1-1.3.2.8.1"><a href="#section-3.8" class="auto internal xref">3.8</a>.  <a href="#name-sqa-security-question-answe" class="internal xref">"sqa" (Security Question Answers) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.9">
-                <p id="section-toc.1-1.3.2.9.1"><a href="#section-3.9" class="auto internal xref">3.9</a>.  <a href="#name-sqa-security-question-answe" class="internal xref">"sqa" (Security Question Answers) Method</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.10">
-                <p id="section-toc.1-1.3.2.10.1"><a href="#section-3.10" class="auto internal xref">3.10</a>. <a href="#name-psk-passkey-method" class="internal xref">"psk" (Passkey) Method</a></p>
+                <p id="section-toc.1-1.3.2.9.1"><a href="#section-3.9" class="auto internal xref">3.9</a>.  <a href="#name-passkey-passkey-method" class="internal xref">"passkey" (Passkey) Method</a></p>
 </li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-updated-authentication-meth" class="internal xref">Updated Authentication Method Reference Value</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-tel-telephone-call-method" class="internal xref">"tel" (Telephone Call) Method</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-privacy-considerations" class="internal xref">Privacy Considerations</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-privacy-considerations" class="internal xref">Privacy Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
-                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-authentication-method-refere" class="internal xref">Authentication Method References Registry</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-authentication-method-refere" class="internal xref">Authentication Method References Registry</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.1">
-                    <p id="section-toc.1-1.6.2.1.2.1.1"><a href="#section-6.1.1" class="auto internal xref">6.1.1</a>.  <a href="#name-app-method" class="internal xref">"app" Method</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.1">
+                    <p id="section-toc.1-1.7.2.1.2.1.1"><a href="#section-7.1.1" class="auto internal xref">7.1.1</a>.  <a href="#name-app-method" class="internal xref">"app" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.2">
-                    <p id="section-toc.1-1.6.2.1.2.2.1"><a href="#section-6.1.2" class="auto internal xref">6.1.2</a>.  <a href="#name-bg-method" class="internal xref">"bg" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.2">
+                    <p id="section-toc.1-1.7.2.1.2.2.1"><a href="#section-7.1.2" class="auto internal xref">7.1.2</a>.  <a href="#name-bg-method" class="internal xref">"bg" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.3">
-                    <p id="section-toc.1-1.6.2.1.2.3.1"><a href="#section-6.1.3" class="auto internal xref">6.1.3</a>.  <a href="#name-email-method" class="internal xref">"email" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.3">
+                    <p id="section-toc.1-1.7.2.1.2.3.1"><a href="#section-7.1.3" class="auto internal xref">7.1.3</a>.  <a href="#name-email-method" class="internal xref">"email" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.4">
-                    <p id="section-toc.1-1.6.2.1.2.4.1"><a href="#section-6.1.4" class="auto internal xref">6.1.4</a>.  <a href="#name-call-method" class="internal xref">"call" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.4">
+                    <p id="section-toc.1-1.7.2.1.2.4.1"><a href="#section-7.1.4" class="auto internal xref">7.1.4</a>.  <a href="#name-code-method" class="internal xref">"code" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.5">
-                    <p id="section-toc.1-1.6.2.1.2.5.1"><a href="#section-6.1.5" class="auto internal xref">6.1.5</a>.  <a href="#name-code-method" class="internal xref">"code" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.5">
+                    <p id="section-toc.1-1.7.2.1.2.5.1"><a href="#section-7.1.5" class="auto internal xref">7.1.5</a>.  <a href="#name-url-method" class="internal xref">"url" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.6">
-                    <p id="section-toc.1-1.6.2.1.2.6.1"><a href="#section-6.1.6" class="auto internal xref">6.1.6</a>.  <a href="#name-url-method" class="internal xref">"url" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.6">
+                    <p id="section-toc.1-1.7.2.1.2.6.1"><a href="#section-7.1.6" class="auto internal xref">7.1.6</a>.  <a href="#name-push-method" class="internal xref">"push" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.7">
-                    <p id="section-toc.1-1.6.2.1.2.7.1"><a href="#section-6.1.7" class="auto internal xref">6.1.7</a>.  <a href="#name-push-method" class="internal xref">"push" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.7">
+                    <p id="section-toc.1-1.7.2.1.2.7.1"><a href="#section-7.1.7" class="auto internal xref">7.1.7</a>.  <a href="#name-facliv-method" class="internal xref">"facliv" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.8">
-                    <p id="section-toc.1-1.6.2.1.2.8.1"><a href="#section-6.1.8" class="auto internal xref">6.1.8</a>.  <a href="#name-facliv-method" class="internal xref">"facliv" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.8">
+                    <p id="section-toc.1-1.7.2.1.2.8.1"><a href="#section-7.1.8" class="auto internal xref">7.1.8</a>.  <a href="#name-sqa-method" class="internal xref">"sqa" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.9">
-                    <p id="section-toc.1-1.6.2.1.2.9.1"><a href="#section-6.1.9" class="auto internal xref">6.1.9</a>.  <a href="#name-sqa-method" class="internal xref">"sqa" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.9">
+                    <p id="section-toc.1-1.7.2.1.2.9.1"><a href="#section-7.1.9" class="auto internal xref">7.1.9</a>.  <a href="#name-passkey-method" class="internal xref">"passkey" Method</a></p>
 </li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.10">
-                    <p id="section-toc.1-1.6.2.1.2.10.1"><a href="#section-6.1.10" class="auto internal xref">6.1.10</a>. <a href="#name-psk-method" class="internal xref">"psk" Method</a></p>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.10">
+                    <p id="section-toc.1-1.7.2.1.2.10.1"><a href="#section-7.1.10" class="auto internal xref">7.1.10</a>. <a href="#name-tel-method" class="internal xref">"tel" Method</a></p>
 </li>
                 </ul>
 </li>
             </ul>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-references" class="internal xref">References</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-references" class="internal xref">References</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
-                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1">
+                <p id="section-toc.1-1.8.2.1.1"><a href="#section-8.1" class="auto internal xref">8.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
 </li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
-                <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="auto internal xref">7.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.2">
+                <p id="section-toc.1-1.8.2.2.1"><a href="#section-8.2" class="auto internal xref">8.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
 </li>
             </ul>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-document-history" class="internal xref">Document History</a></p>
-</li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.9.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-document-history" class="internal xref">Document History</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
+            <p id="section-toc.1-1.11.1"><a href="#appendix-C" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1352,346 +1363,363 @@ are defined by this specification:<a href="#section-3-1" class="pilcrow">¶</a><
 </dl>
 </section>
 </div>
-<div id="callMethod">
+<div id="codeMethod">
 <section id="section-3.4">
-        <h3 id="name-call-voice-call-providing-c">
-<a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-call-voice-call-providing-c" class="section-name selfRef">"call" (Voice call providing code) Method</a>
+        <h3 id="name-code-code-provided-to-and-e">
+<a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-code-code-provided-to-and-e" class="section-name selfRef">"code" (Code provided to and entered by user) Method</a>
         </h3>
 <span class="break"></span><dl class="dlNewline" id="section-3.4-1">
-          <dt id="section-3.4-1.1">call:</dt>
+          <dt id="section-3.4-1.1">code:</dt>
           <dd style="margin-left: 1.5em" id="section-3.4-1.2">
-            <p id="section-3.4-1.2.1">Voice call providing code<a href="#section-3.4-1.2.1" class="pilcrow">¶</a></p>
-</dd>
-        <dd class="break"></dd>
-</dl>
-</section>
-</div>
-<div id="codeMethod">
-<section id="section-3.5">
-        <h3 id="name-code-code-provided-to-and-e">
-<a href="#section-3.5" class="section-number selfRef">3.5. </a><a href="#name-code-code-provided-to-and-e" class="section-name selfRef">"code" (Code provided to and entered by user) Method</a>
-        </h3>
-<span class="break"></span><dl class="dlNewline" id="section-3.5-1">
-          <dt id="section-3.5-1.1">code:</dt>
-          <dd style="margin-left: 1.5em" id="section-3.5-1.2">
-            <p id="section-3.5-1.2.1">Code provided to and entered by user<a href="#section-3.5-1.2.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-1.2.1">Code provided to and entered by user<a href="#section-3.4-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
 </section>
 </div>
 <div id="urlMethod">
-<section id="section-3.6">
+<section id="section-3.5">
         <h3 id="name-url-url-provided-to-and-cli">
-<a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-url-url-provided-to-and-cli" class="section-name selfRef">"url" (URL provided to and clicked on by user) Method</a>
+<a href="#section-3.5" class="section-number selfRef">3.5. </a><a href="#name-url-url-provided-to-and-cli" class="section-name selfRef">"url" (URL provided to and clicked on by user) Method</a>
         </h3>
-<span class="break"></span><dl class="dlNewline" id="section-3.6-1">
-          <dt id="section-3.6-1.1">url:</dt>
-          <dd style="margin-left: 1.5em" id="section-3.6-1.2">
-            <p id="section-3.6-1.2.1">URL provided to and clicked on by user<a href="#section-3.6-1.2.1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-3.5-1">
+          <dt id="section-3.5-1.1">url:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-1.2">
+            <p id="section-3.5-1.2.1">URL provided to and clicked on by user<a href="#section-3.5-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
 </section>
 </div>
 <div id="pushMethod">
-<section id="section-3.7">
+<section id="section-3.6">
         <h3 id="name-push-push-notification-to-m">
-<a href="#section-3.7" class="section-number selfRef">3.7. </a><a href="#name-push-push-notification-to-m" class="section-name selfRef">"push" (Push notification to mobile phone) Method</a>
+<a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-push-push-notification-to-m" class="section-name selfRef">"push" (Push notification to mobile phone) Method</a>
         </h3>
-<span class="break"></span><dl class="dlNewline" id="section-3.7-1">
-          <dt id="section-3.7-1.1">push:</dt>
-          <dd style="margin-left: 1.5em" id="section-3.7-1.2">
-            <p id="section-3.7-1.2.1">Push notification to mobile phone<a href="#section-3.7-1.2.1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-3.6-1">
+          <dt id="section-3.6-1.1">push:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.6-1.2">
+            <p id="section-3.6-1.2.1">Push notification to mobile phone<a href="#section-3.6-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
 </section>
 </div>
 <div id="faclivMethod">
-<section id="section-3.8">
+<section id="section-3.7">
         <h3 id="name-facliv-facial-recognition-w">
-<a href="#section-3.8" class="section-number selfRef">3.8. </a><a href="#name-facliv-facial-recognition-w" class="section-name selfRef">"facliv" (Facial Recognition with Liveness Check) Method</a>
+<a href="#section-3.7" class="section-number selfRef">3.7. </a><a href="#name-facliv-facial-recognition-w" class="section-name selfRef">"facliv" (Facial Recognition with Liveness Check) Method</a>
         </h3>
-<span class="break"></span><dl class="dlNewline" id="section-3.8-1">
-          <dt id="section-3.8-1.1">facliv:</dt>
-          <dd style="margin-left: 1.5em" id="section-3.8-1.2">
-            <p id="section-3.8-1.2.1">Facial Recognition with Liveness Check<a href="#section-3.8-1.2.1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-3.7-1">
+          <dt id="section-3.7-1.1">facliv:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.7-1.2">
+            <p id="section-3.7-1.2.1">Facial Recognition with Liveness Check<a href="#section-3.7-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
 </section>
 </div>
 <div id="sqaMethod">
-<section id="section-3.9">
+<section id="section-3.8">
         <h3 id="name-sqa-security-question-answe">
-<a href="#section-3.9" class="section-number selfRef">3.9. </a><a href="#name-sqa-security-question-answe" class="section-name selfRef">"sqa" (Security Question Answers) Method</a>
+<a href="#section-3.8" class="section-number selfRef">3.8. </a><a href="#name-sqa-security-question-answe" class="section-name selfRef">"sqa" (Security Question Answers) Method</a>
         </h3>
-<span class="break"></span><dl class="dlNewline" id="section-3.9-1">
-          <dt id="section-3.9-1.1">sqa:</dt>
-          <dd style="margin-left: 1.5em" id="section-3.9-1.2">
-            <p id="section-3.9-1.2.1">Security Question Answers<a href="#section-3.9-1.2.1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-3.8-1">
+          <dt id="section-3.8-1.1">sqa:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.8-1.2">
+            <p id="section-3.8-1.2.1">Security Question Answers<a href="#section-3.8-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
 </section>
 </div>
-<div id="pskMethod">
-<section id="section-3.10">
-        <h3 id="name-psk-passkey-method">
-<a href="#section-3.10" class="section-number selfRef">3.10. </a><a href="#name-psk-passkey-method" class="section-name selfRef">"psk" (Passkey) Method</a>
+<div id="passkeyMethod">
+<section id="section-3.9">
+        <h3 id="name-passkey-passkey-method">
+<a href="#section-3.9" class="section-number selfRef">3.9. </a><a href="#name-passkey-passkey-method" class="section-name selfRef">"passkey" (Passkey) Method</a>
         </h3>
-<span class="break"></span><dl class="dlNewline" id="section-3.10-1">
-          <dt id="section-3.10-1.1">psk:</dt>
-          <dd style="margin-left: 1.5em" id="section-3.10-1.2">
-            <p id="section-3.10-1.2.1">Passkey<a href="#section-3.10-1.2.1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-3.9-1">
+          <dt id="section-3.9-1.1">passkey:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.9-1.2">
+            <p id="section-3.9-1.2.1">Passkey<a href="#section-3.9-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
+</section>
+</div>
+</section>
+</div>
+<div id="amrUpdates">
+<section id="section-4">
+      <h2 id="name-updated-authentication-meth">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-updated-authentication-meth" class="section-name selfRef">Updated Authentication Method Reference Value</a>
+      </h2>
+<p id="section-4-1">The following Authentication Method Reference value
+is updated by this specification:<a href="#section-4-1" class="pilcrow">¶</a></p>
+<div id="telMethod">
+<section id="section-4.1">
+        <h3 id="name-tel-telephone-call-method">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-tel-telephone-call-method" class="section-name selfRef">"tel" (Telephone Call) Method</a>
+        </h3>
+<span class="break"></span><dl class="dlNewline" id="section-4.1-1">
+          <dt id="section-4.1-1.1">tel:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.1-1.2">
+            <p id="section-4.1-1.2.1">Telephone call to the user at a registered number.
+The call may be used to provide information to the user, such as a code, that is then used in another channel.
+The call may be used for the user to provide information that the caller uses in the authentication.<a href="#section-4.1-1.2.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-4.1-2">This definition replaces the one in <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>, which is
+"Confirmation by telephone call to the user at a registered number.
+This authentication technique is sometimes also referred to as
+'call back' <span>[<a href="#RFC4949" class="cite xref">RFC4949</a>]</span>."<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
 </div>
 <div id="security-considerations">
-<section id="section-4">
+<section id="section-5">
       <h2 id="name-security-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-4-1">The security considerations defined in
+<p id="section-5-1">The security considerations defined in
 Authentication Method Reference Values <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>
-apply to this specification.<a href="#section-4-1" class="pilcrow">¶</a></p>
+apply to this specification.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">Note that security questions are not acceptable authentication secrets
+under current NIST guidance <span>[<a href="#SP800-63-4" class="cite xref">SP800-63-4</a>]</span>.<a href="#section-5-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="privacy-considerations">
-<section id="section-5">
+<section id="section-6">
       <h2 id="name-privacy-considerations">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-privacy-considerations" class="section-name selfRef">Privacy Considerations</a>
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-privacy-considerations" class="section-name selfRef">Privacy Considerations</a>
       </h2>
-<p id="section-5-1">The privacy considerations defined in
+<p id="section-6-1">The privacy considerations defined in
 Authentication Method Reference Values <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>
-apply to this specification.<a href="#section-5-1" class="pilcrow">¶</a></p>
+apply to this specification.<a href="#section-6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-6">
+<section id="section-7">
       <h2 id="name-iana-considerations">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
 <div id="ivmRegistry">
-<section id="section-6.1">
+<section id="section-7.1">
         <h3 id="name-authentication-method-refere">
-<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-authentication-method-refere" class="section-name selfRef">Authentication Method References Registry</a>
+<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-authentication-method-refere" class="section-name selfRef">Authentication Method References Registry</a>
         </h3>
-<p id="section-6.1-1">This specification registers the following
+<p id="section-7.1-1">This specification registers the following
 Authentication Method Reference values in the
 IANA "Authentication Method Reference Values" registry <span>[<a href="#IANA.AMR" class="cite xref">IANA.AMR</a>]</span>
-established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
 <div id="app-method">
-<section id="section-6.1.1">
+<section id="section-7.1.1">
           <h4 id="name-app-method">
-<a href="#section-6.1.1" class="section-number selfRef">6.1.1. </a><a href="#name-app-method" class="section-name selfRef">"app" Method</a>
+<a href="#section-7.1.1" class="section-number selfRef">7.1.1. </a><a href="#name-app-method" class="section-name selfRef">"app" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.1-1.1">
-              <p id="section-6.1.1-1.1.1">Authentication Method Reference Name: app<a href="#section-6.1.1-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.1-1.1">
+              <p id="section-7.1.1-1.1.1">Authentication Method Reference Name: app<a href="#section-7.1.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.1-1.2">
-              <p id="section-6.1.1-1.2.1">Authentication Method Reference Description: Authenticator App<a href="#section-6.1.1-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.1-1.2">
+              <p id="section-7.1.1-1.2.1">Authentication Method Reference Description: Authenticator App<a href="#section-7.1.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.1-1.3">
-              <p id="section-6.1.1-1.3.1">Change Controller: IETF<a href="#section-6.1.1-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.1-1.3">
+              <p id="section-7.1.1-1.3.1">Change Controller: IETF<a href="#section-7.1.1-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.1-1.4">
-              <p id="section-6.1.1-1.4.1">Specification Document(s): <a href="#appMethod" class="auto internal xref">Section 3.1</a> of this specification<a href="#section-6.1.1-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.1-1.4">
+              <p id="section-7.1.1-1.4.1">Specification Document(s): <a href="#appMethod" class="auto internal xref">Section 3.1</a> of this specification<a href="#section-7.1.1-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="bg-method">
-<section id="section-6.1.2">
+<section id="section-7.1.2">
           <h4 id="name-bg-method">
-<a href="#section-6.1.2" class="section-number selfRef">6.1.2. </a><a href="#name-bg-method" class="section-name selfRef">"bg" Method</a>
+<a href="#section-7.1.2" class="section-number selfRef">7.1.2. </a><a href="#name-bg-method" class="section-name selfRef">"bg" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.2-1.1">
-              <p id="section-6.1.2-1.1.1">Authentication Method Reference Name: bg<a href="#section-6.1.2-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.2-1.1">
+              <p id="section-7.1.2-1.1.1">Authentication Method Reference Name: bg<a href="#section-7.1.2-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.2-1.2">
-              <p id="section-6.1.2-1.2.1">Authentication Method Reference Description: Background Authentication<a href="#section-6.1.2-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.2-1.2">
+              <p id="section-7.1.2-1.2.1">Authentication Method Reference Description: Background Authentication<a href="#section-7.1.2-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.2-1.3">
-              <p id="section-6.1.2-1.3.1">Change Controller: IETF<a href="#section-6.1.2-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.2-1.3">
+              <p id="section-7.1.2-1.3.1">Change Controller: IETF<a href="#section-7.1.2-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.2-1.4">
-              <p id="section-6.1.2-1.4.1">Specification Document(s): <a href="#bgMethod" class="auto internal xref">Section 3.2</a> of this specification<a href="#section-6.1.2-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.2-1.4">
+              <p id="section-7.1.2-1.4.1">Specification Document(s): <a href="#bgMethod" class="auto internal xref">Section 3.2</a> of this specification<a href="#section-7.1.2-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="email-method">
-<section id="section-6.1.3">
+<section id="section-7.1.3">
           <h4 id="name-email-method">
-<a href="#section-6.1.3" class="section-number selfRef">6.1.3. </a><a href="#name-email-method" class="section-name selfRef">"email" Method</a>
+<a href="#section-7.1.3" class="section-number selfRef">7.1.3. </a><a href="#name-email-method" class="section-name selfRef">"email" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.3-1.1">
-              <p id="section-6.1.3-1.1.1">Authentication Method Reference Name: email<a href="#section-6.1.3-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.3-1.1">
+              <p id="section-7.1.3-1.1.1">Authentication Method Reference Name: email<a href="#section-7.1.3-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.3-1.2">
-              <p id="section-6.1.3-1.2.1">Authentication Method Reference Description: Code or link sent to e-mail<a href="#section-6.1.3-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.3-1.2">
+              <p id="section-7.1.3-1.2.1">Authentication Method Reference Description: Code or link sent to e-mail<a href="#section-7.1.3-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.3-1.3">
-              <p id="section-6.1.3-1.3.1">Change Controller: IETF<a href="#section-6.1.3-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.3-1.3">
+              <p id="section-7.1.3-1.3.1">Change Controller: IETF<a href="#section-7.1.3-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.3-1.4">
-              <p id="section-6.1.3-1.4.1">Specification Document(s): <a href="#emailMethod" class="auto internal xref">Section 3.3</a> of this specification<a href="#section-6.1.3-1.4.1" class="pilcrow">¶</a></p>
-</li>
-          </ul>
-</section>
-</div>
-<div id="call-method">
-<section id="section-6.1.4">
-          <h4 id="name-call-method">
-<a href="#section-6.1.4" class="section-number selfRef">6.1.4. </a><a href="#name-call-method" class="section-name selfRef">"call" Method</a>
-          </h4>
-<ul class="normal">
-<li class="normal" id="section-6.1.4-1.1">
-              <p id="section-6.1.4-1.1.1">Authentication Method Reference Name: call<a href="#section-6.1.4-1.1.1" class="pilcrow">¶</a></p>
-</li>
-            <li class="normal" id="section-6.1.4-1.2">
-              <p id="section-6.1.4-1.2.1">Authentication Method Reference Description: Voice call providing code<a href="#section-6.1.4-1.2.1" class="pilcrow">¶</a></p>
-</li>
-            <li class="normal" id="section-6.1.4-1.3">
-              <p id="section-6.1.4-1.3.1">Change Controller: IETF<a href="#section-6.1.4-1.3.1" class="pilcrow">¶</a></p>
-</li>
-            <li class="normal" id="section-6.1.4-1.4">
-              <p id="section-6.1.4-1.4.1">Specification Document(s): <a href="#callMethod" class="auto internal xref">Section 3.4</a> of this specification<a href="#section-6.1.4-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.3-1.4">
+              <p id="section-7.1.3-1.4.1">Specification Document(s): <a href="#emailMethod" class="auto internal xref">Section 3.3</a> of this specification<a href="#section-7.1.3-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="code-method">
-<section id="section-6.1.5">
+<section id="section-7.1.4">
           <h4 id="name-code-method">
-<a href="#section-6.1.5" class="section-number selfRef">6.1.5. </a><a href="#name-code-method" class="section-name selfRef">"code" Method</a>
+<a href="#section-7.1.4" class="section-number selfRef">7.1.4. </a><a href="#name-code-method" class="section-name selfRef">"code" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.5-1.1">
-              <p id="section-6.1.5-1.1.1">Authentication Method Reference Name: code<a href="#section-6.1.5-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.4-1.1">
+              <p id="section-7.1.4-1.1.1">Authentication Method Reference Name: code<a href="#section-7.1.4-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.5-1.2">
-              <p id="section-6.1.5-1.2.1">Authentication Method Reference Description: Code provided to and entered by user<a href="#section-6.1.5-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.4-1.2">
+              <p id="section-7.1.4-1.2.1">Authentication Method Reference Description: Code provided to and entered by user<a href="#section-7.1.4-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.5-1.3">
-              <p id="section-6.1.5-1.3.1">Change Controller: IETF<a href="#section-6.1.5-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.4-1.3">
+              <p id="section-7.1.4-1.3.1">Change Controller: IETF<a href="#section-7.1.4-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.5-1.4">
-              <p id="section-6.1.5-1.4.1">Specification Document(s): <a href="#codeMethod" class="auto internal xref">Section 3.5</a> of this specification<a href="#section-6.1.5-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.4-1.4">
+              <p id="section-7.1.4-1.4.1">Specification Document(s): <a href="#codeMethod" class="auto internal xref">Section 3.4</a> of this specification<a href="#section-7.1.4-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="url-method">
-<section id="section-6.1.6">
+<section id="section-7.1.5">
           <h4 id="name-url-method">
-<a href="#section-6.1.6" class="section-number selfRef">6.1.6. </a><a href="#name-url-method" class="section-name selfRef">"url" Method</a>
+<a href="#section-7.1.5" class="section-number selfRef">7.1.5. </a><a href="#name-url-method" class="section-name selfRef">"url" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.6-1.1">
-              <p id="section-6.1.6-1.1.1">Authentication Method Reference Name: url<a href="#section-6.1.6-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.5-1.1">
+              <p id="section-7.1.5-1.1.1">Authentication Method Reference Name: url<a href="#section-7.1.5-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.6-1.2">
-              <p id="section-6.1.6-1.2.1">Authentication Method Reference Description: URL provided to and clicked on by user<a href="#section-6.1.6-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.5-1.2">
+              <p id="section-7.1.5-1.2.1">Authentication Method Reference Description: URL provided to and clicked on by user<a href="#section-7.1.5-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.6-1.3">
-              <p id="section-6.1.6-1.3.1">Change Controller: IETF<a href="#section-6.1.6-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.5-1.3">
+              <p id="section-7.1.5-1.3.1">Change Controller: IETF<a href="#section-7.1.5-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.6-1.4">
-              <p id="section-6.1.6-1.4.1">Specification Document(s): <a href="#urlMethod" class="auto internal xref">Section 3.6</a> of this specification<a href="#section-6.1.6-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.5-1.4">
+              <p id="section-7.1.5-1.4.1">Specification Document(s): <a href="#urlMethod" class="auto internal xref">Section 3.5</a> of this specification<a href="#section-7.1.5-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="push-method">
-<section id="section-6.1.7">
+<section id="section-7.1.6">
           <h4 id="name-push-method">
-<a href="#section-6.1.7" class="section-number selfRef">6.1.7. </a><a href="#name-push-method" class="section-name selfRef">"push" Method</a>
+<a href="#section-7.1.6" class="section-number selfRef">7.1.6. </a><a href="#name-push-method" class="section-name selfRef">"push" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.7-1.1">
-              <p id="section-6.1.7-1.1.1">Authentication Method Reference Name: push<a href="#section-6.1.7-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.6-1.1">
+              <p id="section-7.1.6-1.1.1">Authentication Method Reference Name: push<a href="#section-7.1.6-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.7-1.2">
-              <p id="section-6.1.7-1.2.1">Authentication Method Reference Description: Push notification to mobile phone<a href="#section-6.1.7-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.6-1.2">
+              <p id="section-7.1.6-1.2.1">Authentication Method Reference Description: Push notification to mobile phone<a href="#section-7.1.6-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.7-1.3">
-              <p id="section-6.1.7-1.3.1">Change Controller: IETF<a href="#section-6.1.7-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.6-1.3">
+              <p id="section-7.1.6-1.3.1">Change Controller: IETF<a href="#section-7.1.6-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.7-1.4">
-              <p id="section-6.1.7-1.4.1">Specification Document(s): <a href="#pushMethod" class="auto internal xref">Section 3.7</a> of this specification<a href="#section-6.1.7-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.6-1.4">
+              <p id="section-7.1.6-1.4.1">Specification Document(s): <a href="#pushMethod" class="auto internal xref">Section 3.6</a> of this specification<a href="#section-7.1.6-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="facliv-method">
-<section id="section-6.1.8">
+<section id="section-7.1.7">
           <h4 id="name-facliv-method">
-<a href="#section-6.1.8" class="section-number selfRef">6.1.8. </a><a href="#name-facliv-method" class="section-name selfRef">"facliv" Method</a>
+<a href="#section-7.1.7" class="section-number selfRef">7.1.7. </a><a href="#name-facliv-method" class="section-name selfRef">"facliv" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.8-1.1">
-              <p id="section-6.1.8-1.1.1">Authentication Method Reference Name: facliv<a href="#section-6.1.8-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.7-1.1">
+              <p id="section-7.1.7-1.1.1">Authentication Method Reference Name: facliv<a href="#section-7.1.7-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.8-1.2">
-              <p id="section-6.1.8-1.2.1">Authentication Method Reference Description: Facial Recognition with Liveness Check<a href="#section-6.1.8-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.7-1.2">
+              <p id="section-7.1.7-1.2.1">Authentication Method Reference Description: Facial Recognition with Liveness Check<a href="#section-7.1.7-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.8-1.3">
-              <p id="section-6.1.8-1.3.1">Change Controller: IETF<a href="#section-6.1.8-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.7-1.3">
+              <p id="section-7.1.7-1.3.1">Change Controller: IETF<a href="#section-7.1.7-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.8-1.4">
-              <p id="section-6.1.8-1.4.1">Specification Document(s): <a href="#faclivMethod" class="auto internal xref">Section 3.8</a> of this specification<a href="#section-6.1.8-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.7-1.4">
+              <p id="section-7.1.7-1.4.1">Specification Document(s): <a href="#faclivMethod" class="auto internal xref">Section 3.7</a> of this specification<a href="#section-7.1.7-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
 <div id="sqa-method">
-<section id="section-6.1.9">
+<section id="section-7.1.8">
           <h4 id="name-sqa-method">
-<a href="#section-6.1.9" class="section-number selfRef">6.1.9. </a><a href="#name-sqa-method" class="section-name selfRef">"sqa" Method</a>
+<a href="#section-7.1.8" class="section-number selfRef">7.1.8. </a><a href="#name-sqa-method" class="section-name selfRef">"sqa" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.9-1.1">
-              <p id="section-6.1.9-1.1.1">Authentication Method Reference Name: sqa<a href="#section-6.1.9-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.8-1.1">
+              <p id="section-7.1.8-1.1.1">Authentication Method Reference Name: sqa<a href="#section-7.1.8-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.9-1.2">
-              <p id="section-6.1.9-1.2.1">Authentication Method Reference Description: Security Question Answers<a href="#section-6.1.9-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.8-1.2">
+              <p id="section-7.1.8-1.2.1">Authentication Method Reference Description: Security Question Answers<a href="#section-7.1.8-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.9-1.3">
-              <p id="section-6.1.9-1.3.1">Change Controller: IETF<a href="#section-6.1.9-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.8-1.3">
+              <p id="section-7.1.8-1.3.1">Change Controller: IETF<a href="#section-7.1.8-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.9-1.4">
-              <p id="section-6.1.9-1.4.1">Specification Document(s): <a href="#sqaMethod" class="auto internal xref">Section 3.9</a> of this specification<a href="#section-6.1.9-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.8-1.4">
+              <p id="section-7.1.8-1.4.1">Specification Document(s): <a href="#sqaMethod" class="auto internal xref">Section 3.8</a> of this specification<a href="#section-7.1.8-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
-<div id="psk-method">
-<section id="section-6.1.10">
-          <h4 id="name-psk-method">
-<a href="#section-6.1.10" class="section-number selfRef">6.1.10. </a><a href="#name-psk-method" class="section-name selfRef">"psk" Method</a>
+<div id="passkey-method">
+<section id="section-7.1.9">
+          <h4 id="name-passkey-method">
+<a href="#section-7.1.9" class="section-number selfRef">7.1.9. </a><a href="#name-passkey-method" class="section-name selfRef">"passkey" Method</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-6.1.10-1.1">
-              <p id="section-6.1.10-1.1.1">Authentication Method Reference Name: psk<a href="#section-6.1.10-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-7.1.9-1.1">
+              <p id="section-7.1.9-1.1.1">Authentication Method Reference Name: passkey<a href="#section-7.1.9-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.10-1.2">
-              <p id="section-6.1.10-1.2.1">Authentication Method Reference Description: Passkey<a href="#section-6.1.10-1.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.9-1.2">
+              <p id="section-7.1.9-1.2.1">Authentication Method Reference Description: Passkey<a href="#section-7.1.9-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.10-1.3">
-              <p id="section-6.1.10-1.3.1">Change Controller: IETF<a href="#section-6.1.10-1.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.9-1.3">
+              <p id="section-7.1.9-1.3.1">Change Controller: IETF<a href="#section-7.1.9-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.1.10-1.4">
-              <p id="section-6.1.10-1.4.1">Specification Document(s): <a href="#pskMethod" class="auto internal xref">Section 3.10</a> of this specification<a href="#section-6.1.10-1.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-7.1.9-1.4">
+              <p id="section-7.1.9-1.4.1">Specification Document(s): <a href="#passkeyMethod" class="auto internal xref">Section 3.9</a> of this specification<a href="#section-7.1.9-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+</section>
+</div>
+<div id="tel-method">
+<section id="section-7.1.10">
+          <h4 id="name-tel-method">
+<a href="#section-7.1.10" class="section-number selfRef">7.1.10. </a><a href="#name-tel-method" class="section-name selfRef">"tel" Method</a>
+          </h4>
+<ul class="normal">
+<li class="normal" id="section-7.1.10-1.1">
+              <p id="section-7.1.10-1.1.1">Authentication Method Reference Name: tel<a href="#section-7.1.10-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-7.1.10-1.2">
+              <p id="section-7.1.10-1.2.1">Authentication Method Reference Description: Telephone call to the user at a registered number<a href="#section-7.1.10-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-7.1.10-1.3">
+              <p id="section-7.1.10-1.3.1">Change Controller: IETF<a href="#section-7.1.10-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-7.1.10-1.4">
+              <p id="section-7.1.10-1.4.1">Specification Document(s): <a href="#telMethod" class="auto internal xref">Section 4.1</a> of this specification<a href="#section-7.1.10-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1701,14 +1729,14 @@ established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<
 </section>
 </div>
 <div id="sec-combined-references">
-<section id="section-7">
+<section id="section-8">
       <h2 id="name-references">
-<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
 <div id="sec-normative-references">
-<section id="section-7.1">
+<section id="section-8.1">
         <h3 id="name-normative-references">
-<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
@@ -1727,9 +1755,9 @@ established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<
 </section>
 </div>
 <div id="sec-informative-references">
-<section id="section-7.2">
+<section id="section-8.2">
         <h3 id="name-informative-references">
-<a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
 <dt id="I-D.skyfire-oauth-kyapay-token">[I-D.skyfire-oauth-kyapay-token]</dt>
@@ -1744,49 +1772,78 @@ established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<
         <dd>
 <span class="refAuthor">Sakimura, N.</span>, <span class="refAuthor">Bradley, J.</span>, <span class="refAuthor">Jones, M. B.</span>, <span class="refAuthor">Medeiros, B. de.</span>, and <span class="refAuthor">C. Mortimore</span>, <span class="refTitle">"OpenID Connect Core 1.0 incorporating errata set 2"</span>, <time datetime="2023-12-15" class="refDate">15 December 2023</time>, <span>&lt;<a href="https://openid.net/specs/openid-connect-core-1_0.html">https://openid.net/specs/openid-connect-core-1_0.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC4949">[RFC4949]</dt>
+        <dd>
+<span class="refAuthor">Shirey, R.</span>, <span class="refTitle">"Internet Security Glossary, Version 2"</span>, <span class="seriesInfo">FYI 36</span>, <span class="seriesInfo">RFC 4949</span>, <span class="seriesInfo">DOI 10.17487/RFC4949</span>, <time datetime="2007-08" class="refDate">August 2007</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4949">https://www.rfc-editor.org/rfc/rfc4949</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC7519">[RFC7519]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Jones, M.</span>, <span class="refAuthor">Bradley, J.</span>, and <span class="refAuthor">N. Sakimura</span>, <span class="refTitle">"JSON Web Token (JWT)"</span>, <span class="seriesInfo">RFC 7519</span>, <span class="seriesInfo">DOI 10.17487/RFC7519</span>, <time datetime="2015-05" class="refDate">May 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7519">https://www.rfc-editor.org/rfc/rfc7519</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="SP800-63-4">[SP800-63-4]</dt>
+      <dd>
+<span class="refAuthor">National Institute of Standards (NIST)</span>, <span class="refTitle">"NIST SP 800-63-4: Digital Identity Guidelines"</span>, <time datetime="2025-07" class="refDate">July 2025</time>, <span>&lt;<a href="https://pages.nist.gov/800-63-4/sp800-63.html">https://pages.nist.gov/800-63-4/sp800-63.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
 </div>
 </section>
 </div>
-<div id="document-history">
+<div id="acknowledgments">
 <section id="appendix-A">
+      <h2 id="name-acknowledgments">
+<a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
+      </h2>
+<p id="appendix-A-1">We would like to thank
+Jean Diaconu
+and
+Rob Zagarella
+for their contributions to the specification.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="document-history">
+<section id="appendix-B">
       <h2 id="name-document-history">
 <a href="#name-document-history" class="section-name selfRef">Document History</a>
       </h2>
-<p id="appendix-A-1">[[ to be removed by the RFC Editor before publication as an RFC ]]<a href="#appendix-A-1" class="pilcrow">¶</a></p>
-<p id="appendix-A-2">-02<a href="#appendix-A-2" class="pilcrow">¶</a></p>
+<p id="appendix-B-1">[[ to be removed by the RFC Editor before publication as an RFC ]]<a href="#appendix-B-1" class="pilcrow">¶</a></p>
+<p id="appendix-B-2">-02<a href="#appendix-B-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A-3.1">
-          <p id="appendix-A-3.1.1">Added {:vspace} syntax to definition list entries.<a href="#appendix-A-3.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-B-3.1">
+          <p id="appendix-B-3.1.1">Updated the definition of "tel" to incorporate calls to provide information such as codes.<a href="#appendix-B-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-3.2">
+          <p id="appendix-B-3.2.1">Renamed "psk" to "passkey" because of the potential confusion with pre-shared key.<a href="#appendix-B-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-3.3">
+          <p id="appendix-B-3.3.1">Added warning in Security Considerations that security questions are not acceptable authentication secrets under current NIST guidance.<a href="#appendix-B-3.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-3.4">
+          <p id="appendix-B-3.4.1">Added {:vspace} syntax to definition list entries.<a href="#appendix-B-3.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-A-4">-01<a href="#appendix-A-4" class="pilcrow">¶</a></p>
+<p id="appendix-B-4">-01<a href="#appendix-B-4" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A-5.1">
-          <p id="appendix-A-5.1.1">Moved "inp" and "vid" methods to the ID Verification spec.<a href="#appendix-A-5.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-B-5.1">
+          <p id="appendix-B-5.1.1">Moved "inp" and "vid" methods to the ID Verification spec.<a href="#appendix-B-5.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="appendix-A-5.2">
-          <p id="appendix-A-5.2.1">Added "call", "code", "url", "facliv", "sqa", and "psk" methods.<a href="#appendix-A-5.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="appendix-B-5.2">
+          <p id="appendix-B-5.2.1">Added "call", "code", "url", "facliv", "sqa", and "psk" methods.<a href="#appendix-B-5.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="appendix-A-5.3">
-          <p id="appendix-A-5.3.1">Added Nash Ali and Srinivasa Thumma as authors.<a href="#appendix-A-5.3.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="appendix-B-5.3">
+          <p id="appendix-B-5.3.1">Added Nash Ali and Srinivasa Thumma as authors.<a href="#appendix-B-5.3.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-A-6">-00<a href="#appendix-A-6" class="pilcrow">¶</a></p>
+<p id="appendix-B-6">-00<a href="#appendix-B-6" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A-7.1">
-          <p id="appendix-A-7.1.1">Initial draft.<a href="#appendix-A-7.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-B-7.1">
+          <p id="appendix-B-7.1.1">Initial draft.<a href="#appendix-B-7.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
 </div>
 <div id="authors-addresses">
-<section id="appendix-B">
+<section id="appendix-C">
       <h2 id="name-authors-addresses">
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
