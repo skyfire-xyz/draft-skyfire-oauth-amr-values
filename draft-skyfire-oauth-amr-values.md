@@ -11,6 +11,7 @@ consensus: true
 v: 3
 area: Security
 workgroup: Web Authorization Protocol
+updates: 8176
 keyword:
  - agent
  - identity
@@ -50,6 +51,7 @@ normative:
   RFC8176:
 
 informative:
+  RFC4949:
   RFC7519:
   I-D.skyfire-oauth-kyapay-token:
   OpenID.Core:
@@ -68,6 +70,12 @@ informative:
     target: https://www.iana.org/assignments/authentication-method-reference-values
     title: Authentication Method Reference Values
     date: false
+  SP800-63-4:
+    target: https://pages.nist.gov/800-63-4/sp800-63.html
+    title: "NIST SP 800-63-4: Digital Identity Guidelines"
+    author:
+    - org: National Institute of Standards (NIST)
+    date: July 2025
 
 ...
 
@@ -127,12 +135,6 @@ bg:
 email:
 : Use of code or link sent to e-mail
 
-## "call" (Voice call providing code) Method {#callMethod}
-
-{:vspace}
-call:
-: Voice call providing code
-
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
 {:vspace}
@@ -163,11 +165,30 @@ facliv:
 sqa:
 : Security Question Answers
 
-## "psk" (Passkey) Method {#pskMethod}
+## "passkey" (Passkey) Method {#passkeyMethod}
 
 {:vspace}
-psk:
+passkey:
 : Passkey
+
+
+# Updated Authentication Method Reference Value {#amrUpdates}
+
+The following Authentication Method Reference value
+is updated by this specification:
+
+## "tel" (Telephone Call) Method {#telMethod}
+
+{:vspace}
+tel:
+: Telephone call to the user at a registered number.
+  The call may be used to provide information to the user, such as a code, that is then used in another channel.
+  The call may be used for the user to provide information that the caller uses in the authentication.
+
+This definition replaces the one in {{RFC8176}}, which is
+"Confirmation by telephone call to the user at a registered number.
+This authentication technique is sometimes also referred to as
+'call back' {{RFC4949}}."
 
 
 # Security Considerations
@@ -175,6 +196,9 @@ psk:
 The security considerations defined in
 Authentication Method Reference Values {{RFC8176}}
 apply to this specification.
+
+Note that security questions are not acceptable authentication secrets
+under current NIST guidance {{SP800-63-4}}.
 
 
 # Privacy Considerations
@@ -214,13 +238,6 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{emailMethod}} of this specification
 
-### "call" Method
-
-* Authentication Method Reference Name: call
-* Authentication Method Reference Description: Voice call providing code
-* Change Controller: IETF
-* Specification Document(s): {{callMethod}} of this specification
-
 ### "code" Method
 
 * Authentication Method Reference Name: code
@@ -256,15 +273,32 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{sqaMethod}} of this specification
 
-### "psk" Method
+### "passkey" Method
 
-* Authentication Method Reference Name: psk
+* Authentication Method Reference Name: passkey
 * Authentication Method Reference Description: Passkey
 * Change Controller: IETF
-* Specification Document(s): {{pskMethod}} of this specification
+* Specification Document(s): {{passkeyMethod}} of this specification
+
+### "tel" Method
+
+* Authentication Method Reference Name: tel
+* Authentication Method Reference Description: Telephone call to the user at a registered number
+* Change Controller: IETF
+* Specification Document(s): {{telMethod}} of this specification
 
 
 --- back
+
+# Acknowledgments
+{: numbered="false"}
+
+We would like to thank
+Jean Diaconu
+and
+Rob Zagarella
+for their contributions to the specification.
+
 
 # Document History
 {: numbered="false"}
@@ -273,6 +307,9 @@ established by {{RFC8176}}.
 
 -02
 
+* Updated the definition of "tel" to incorporate calls to provide information such as codes.
+* Renamed "psk" to "passkey" because of the potential confusion with pre-shared key.
+* Added warning in Security Considerations that security questions are not acceptable authentication secrets under current NIST guidance.
 * Added {:vspace} syntax to definition list entries.
 
 -01
