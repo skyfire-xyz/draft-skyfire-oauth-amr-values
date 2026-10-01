@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-29T00:52:35.248391+00:00",
+  "timestamp": "2026-10-01T01:00:49.525987+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -339,24 +339,26 @@
       "id": "PR_kwDOTL-pLM8AAAABD8yYHw",
       "title": "Address Jean Diaconu's review comments",
       "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/7",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "selfissued",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "cc: @jadiaconu",
       "createdAt": "2026-09-17T15:11:06Z",
-      "updatedAt": "2026-09-28T17:03:35Z",
+      "updatedAt": "2026-09-30T17:56:01Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52",
       "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "headRefName": "mbj-jean",
-      "headRefOid": "7a271e44a418e6b589a23b2ac1977a8c2529ea3f",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "9e1040e09923cf44eeb5b677aac187a6a6d43316",
+      "closedAt": "2026-09-30T17:56:01Z",
+      "mergedAt": "2026-09-30T17:56:01Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "2e4d3bc6275d3bf0f72eb30e2a40d1be27f0db9a"
+      },
       "comments": [
         {
           "author": "selfissued",
