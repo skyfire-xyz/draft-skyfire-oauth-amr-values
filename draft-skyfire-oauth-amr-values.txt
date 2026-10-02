@@ -6,11 +6,11 @@ Web Authorization Protocol                                    A. Agarwal
 Internet-Draft                                      Skyfire Systems Inc.
 Updates: 8176 (if approved)                                     M. Jones
 Intended status: Standards Track                  Self-Issued Consulting
-Expires: 3 April 2027                                             N. Ali
+Expires: 5 April 2027                                             N. Ali
                                                                 Experian
                                                                S. Thumma
                                                                   Akamai
-                                                       30 September 2026
+                                                          2 October 2026
 
 
            Additional Authentication Method Reference Values
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 April 2027.
+   This Internet-Draft will expire on 5 April 2027.
 
 Copyright Notice
 
@@ -391,7 +391,7 @@ Document History
    -02
 
    *  Updated the definition of "tel" to incorporate calls to provide
-      information such as codes.
+      information such as codes and removed "call".
 
    *  Renamed "psk" to "passkey" because of the potential confusion with
       pre-shared key.
