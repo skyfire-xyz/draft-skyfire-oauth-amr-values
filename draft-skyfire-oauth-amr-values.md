@@ -307,7 +307,7 @@ for their contributions to the specification.
 
 -02
 
-* Updated the definition of "tel" to incorporate calls to provide information such as codes.
+* Updated the definition of "tel" to incorporate calls to provide information such as codes and removed "call".
 * Renamed "psk" to "passkey" because of the potential confusion with pre-shared key.
 * Added warning in Security Considerations that security questions are not acceptable authentication secrets under current NIST guidance.
 * Added {:vspace} syntax to definition list entries.
