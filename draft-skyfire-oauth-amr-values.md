@@ -76,6 +76,27 @@ informative:
     author:
     - org: National Institute of Standards (NIST)
     date: July 2025
+  WebAuthn:
+    target: https://www.w3.org/TR/2026/REC-webauthn-3-20260825/
+    title: "Web Authentication: An API for accessing Public Key Credentials - Level 3"
+    author:
+      - name: Tim Cappalli
+      - name: Akshay Kumar
+      - name: Emil Lundberg
+      - name: Matthew Miller
+      - name: Pascoe
+      - name: Nina Satragno
+    date: 2026-08-25
+    seriesinfo:
+      W3C: Recommendation
+  ISO30107-1:
+    target: https://www.iso.org/standard/83828.html
+    title: "Information technology - Biometric presentation attack detection - Part 1: Framework"
+    author:
+      - org: International Organization for Standardization
+    date: 2023
+    seriesinfo:
+      "ISO/IEC": "30107-1:2023"
 
 ...
 
@@ -121,7 +142,11 @@ are defined by this specification:
 
 {:vspace}
 app:
-: Authenticator App (e.g., Okta Verify, Google Authenticator, Microsoft Authenticator)
+: Use of an authenticator application on a device held by the user.
+  An issuer includes this value where it knows that an authenticator application was used.
+  Where a code is produced from a shared secret
+  and the issuer cannot determine what produced it,
+  this value is omitted.
 
 ## "bg" (Background Authentication) Method {#bgMethod}
 
@@ -129,11 +154,29 @@ app:
 bg:
 : Background Authentication (Silent network authentication of phone number, device recognition, geo-location, etc.)
 
-## "email" (Code or link sent to e-mail) Method {#emailMethod}
+  The "sna" value ({{snaMethod}}) identifies one specific background method
+  and is a subset of this value.
+  Geo-location is separately registered as "geo"
+  and device recognition is within the scope of "rba",
+  both in {{RFC8176}}.
+
+## "sna" (Silent Network Authentication) Method {#snaMethod}
+
+{:vspace}
+sna:
+: Silent Network Authentication.
+  Confirmation by the mobile network operator that the device making the request
+  holds the subscriber identity associated with a given telephone number,
+  performed without any interaction with the user.
+
+## "email" (E-mail Channel) Method {#emailMethod}
 
 {:vspace}
 email:
-: Use of code or link sent to e-mail
+: Use of e-mail as the channel by which an authentication interaction reached the user.
+  What was delivered over the channel is described by an accompanying value
+  such as "code" or "url".
+  See {{composing}}.
 
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
@@ -153,11 +196,20 @@ url:
 push:
 : Push notification to mobile phone
 
-## "facliv" (Facial Recognition with Liveness Check) Method {#faclivMethod}
+## "facliv" (Facial Liveness Check) Method {#faclivMethod}
 
 {:vspace}
 facliv:
-: Facial Recognition with Liveness Check
+: Determination that a facial image or video presented for authentication
+  is of a live person rather than an artifact
+  such as a photograph, mask, or synthetic rendering.
+  This is a presentation attack detection measure {{ISO30107-1}}.
+
+  The "facliv" and "face" {{RFC8176}} values describe different determinations
+  and are not alternatives:
+  "face" is a comparison of a presented face against a reference,
+  and "facliv" is a determination that the presented face is live.
+  Where both were performed, both values are included.
 
 ## "sqa" (Security Question Answers) Method {#sqaMethod}
 
@@ -169,7 +221,23 @@ sqa:
 
 {:vspace}
 passkey:
-: Passkey
+: A passkey, that is, a client-side discoverable credential as defined by {{WebAuthn}}.
+
+## "uv" (User Verification) Method {#uvMethod}
+
+{:vspace}
+uv:
+: User verification.
+  Local authorization of the authenticator by an authorization gesture
+  capable of distinguishing individual users,
+  such as a PIN, a password, or biometric recognition {{WebAuthn}}.
+
+  This is distinct from "user" {{RFC8176}}, which is a test of user presence.
+  As {{WebAuthn}} states, a user presence test
+  "is not capable of biometric recognition,
+  nor does it involve the presentation of a shared secret such as a password or PIN".
+
+  This value does not identify which modality the authenticator used.
 
 
 # Updated Authentication Method Reference Value {#amrUpdates}
@@ -189,6 +257,38 @@ This definition replaces the one in {{RFC8176}}, which is
 "Confirmation by telephone call to the user at a registered number.
 This authentication technique is sometimes also referred to as
 'call back' {{RFC4949}}."
+
+
+# Composing Authentication Method Reference Values {#composing}
+
+The "amr" claim value is an array, and as described in {{RFC8176}},
+all the applicable values may be returned.
+A single authentication event is frequently described by more than one value,
+because the registered values describe different aspects of it.
+
+Two of the values registered by this specification describe the channel
+by which an authentication interaction reached the person: "email" and "push".
+{{RFC8176}} registers "sms" and "tel" in the same sense,
+and uses the term "channel" in this sense in its definition of "mca".
+
+Two describe the challenge delivered over such a channel,
+which the person must return to the verifier to complete the authentication:
+"code" and "url".
+The person may return it directly, as when a code is read and typed in,
+or indirectly, as when following a link causes the value to be sent.
+{{RFC8176}} registers "otp" in the same sense.
+
+A channel value alone does not say what the person did.
+A challenge value alone does not say how it reached them.
+An issuer that knows both will typically return both.
+{{examples}} gives examples, and {{compositions}} maps terms in common industry use
+onto the corresponding sets of values.
+
+The "sms" value registered by {{RFC8176}} predates this distinction.
+Its definition describes both a channel and the interaction carried over it,
+and is unchanged by this specification.
+An issuer wishing to be explicit about what was delivered over the SMS channel
+may return a challenge value alongside it.
 
 
 # Security Considerations
@@ -231,10 +331,17 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{bgMethod}} of this specification
 
+### "sna" Method
+
+* Authentication Method Reference Name: sna
+* Authentication Method Reference Description: Silent Network Authentication
+* Change Controller: IETF
+* Specification Document(s): {{snaMethod}} of this specification
+
 ### "email" Method
 
 * Authentication Method Reference Name: email
-* Authentication Method Reference Description: Code or link sent to e-mail
+* Authentication Method Reference Description: Use of e-mail as the channel for an authentication interaction
 * Change Controller: IETF
 * Specification Document(s): {{emailMethod}} of this specification
 
@@ -262,7 +369,7 @@ established by {{RFC8176}}.
 ### "facliv" Method
 
 * Authentication Method Reference Name: facliv
-* Authentication Method Reference Description: Facial Recognition with Liveness Check
+* Authentication Method Reference Description: Facial Liveness Check
 * Change Controller: IETF
 * Specification Document(s): {{faclivMethod}} of this specification
 
@@ -280,6 +387,13 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{passkeyMethod}} of this specification
 
+### "uv" Method
+
+* Authentication Method Reference Name: uv
+* Authentication Method Reference Description: User Verification
+* Change Controller: IETF
+* Specification Document(s): {{uvMethod}} of this specification
+
 ### "tel" Method
 
 * Authentication Method Reference Name: tel
@@ -290,11 +404,86 @@ established by {{RFC8176}}.
 
 --- back
 
+# Examples {#examples}
+
+The following "amr" claim value indicates that a one-time code
+was sent to the user over the e-mail channel and entered by the user:
+
+~~~
+"amr": ["email", "code"]
+~~~
+
+The following "amr" claim value indicates that a link
+was sent to the user over the e-mail channel and followed by the user:
+
+~~~
+"amr": ["email", "url"]
+~~~
+
+The following "amr" claim value indicates that a one-time password
+was generated by an authenticator application and entered by the user:
+
+~~~
+"amr": ["app", "otp"]
+~~~
+
+The following "amr" claim value indicates that a password was used
+together with a code sent over the e-mail channel,
+and that the issuer considers the combination to be multiple-factor authentication:
+
+~~~
+"amr": ["pwd", "email", "code", "mfa"]
+~~~
+
+# Common Compositions {#compositions}
+
+The terms below are names in common industry use for authentication arrangements
+that this specification describes using more than one value.
+This mapping is non-normative.
+It is provided so that implementers of the same arrangement emit the same set of values.
+
+{:vspace}
+Email one-time code, also called email OTP:
+: `["email", "code"]`
+
+Magic link, also called e-mail link sign-in:
+: `["email", "url"]`
+
+SMS one-time code:
+: `["sms", "code"]`.
+  As noted in {{composing}}, "sms" predates the channel and challenge distinction,
+  and `["sms"]` remains correct.
+
+Voice one-time code, where a call conveys a code that the user then enters:
+: `["tel", "code"]`
+
+Call-back confirmation, where the user confirms during the call itself:
+: `["tel"]`
+
+Authenticator application one-time password, also called TOTP:
+: `["app", "otp"]`
+
+Push approval:
+: `["push"]`
+
+Push approval with number matching:
+: `["push", "code"]`
+
+Silent network authentication:
+: `["sna"]`
+
+Facial recognition with a liveness check:
+: `["face", "facliv"]`
+
+Device-bound passkey held in hardware, such as on a security key:
+: `["passkey", "hwk"]`
+
 # Acknowledgments
 {: numbered="false"}
 
 We would like to thank
-Jean Diaconu
+Jean Diaconu,
+Max Gerber,
 and
 Rob Zagarella
 for their contributions to the specification.
@@ -304,6 +493,17 @@ for their contributions to the specification.
 {: numbered="false"}
 
 [[ to be removed by the RFC Editor before publication as an RFC ]]
+
+-03
+
+* Added "sna" for silent network authentication, a specific case of the background authentication described by "bg".
+* Added "uv" for user verification, distinct from the user presence test described by "user" {{RFC8176}}.
+* Redefined "app" by the property it describes rather than by product examples, and stated when an issuer can assert it.
+* Narrowed "email" to the channel, with what was delivered over it described by an accompanying value.
+* Stated that "facliv" and "face" {{RFC8176}} describe different determinations and are included together where both were performed, and added a reference to {{ISO30107-1}}.
+* Added a reference for "passkey" to {{WebAuthn}}.
+* Added a section on composing values, and appendices giving examples and common compositions.
+* Added Max Gerber to the acknowledgments.
 
 -02
 
