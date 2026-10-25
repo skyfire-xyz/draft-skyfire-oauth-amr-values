@@ -519,7 +519,7 @@ Appendix B.  Common Compositions
    itself:
       ["tel"]
 
-   Authenticator application one-time password, also called TOTP:
+   Authenticator application one-time password:
       ["app", "otp"]
 
    Push approval:
