@@ -260,9 +260,7 @@ The "email" and "push" values registered by this specification describe the chan
 {{RFC8176}} registers "sms" and "tel" in the same sense,
 and uses the term "channel" in this sense in its definition of "mca".
 
-Two describe the challenge delivered over such a channel,
-which the person must return to the verifier to complete the authentication:
-"code" and "url".
+The "code" and "url" values describe challenges delivered over such a channel, which the person must return to the verifier to complete authentication.
 The person may return it directly, as when a code is read and typed in,
 or indirectly, as when following a link causes the value to be sent.
 The "otp" value {{RFC8176}} is related but narrower:
