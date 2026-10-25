@@ -471,8 +471,8 @@ Table of Contents
 
 Appendix A.  Examples
 
-   The following "amr" claim value indicates that a one-time code was
-   sent to the user over the e-mail channel and entered by the user:
+   The following "amr" claim value indicates that a code was sent to the
+   user over the e-mail channel and entered by the user:
 
    "amr": ["email", "code"]
 
