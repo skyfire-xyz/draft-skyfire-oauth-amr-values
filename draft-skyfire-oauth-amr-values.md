@@ -256,8 +256,7 @@ all the applicable values may be returned.
 A single authentication event is frequently described by more than one value,
 because the registered values describe different aspects of it.
 
-Two of the values registered by this specification describe the channel
-by which an authentication interaction reached the person: "email" and "push".
+The "email" and "push" values registered by this specification describe the channel by which an authentication interaction reached the person.
 {{RFC8176}} registers "sms" and "tel" in the same sense,
 and uses the term "channel" in this sense in its definition of "mca".
 
