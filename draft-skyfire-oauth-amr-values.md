@@ -70,12 +70,6 @@ informative:
     target: https://www.iana.org/assignments/authentication-method-reference-values
     title: Authentication Method Reference Values
     date: false
-  SP800-63-4:
-    target: https://pages.nist.gov/800-63-4/sp800-63.html
-    title: "NIST SP 800-63-4: Digital Identity Guidelines"
-    author:
-    - org: National Institute of Standards (NIST)
-    date: July 2025
   WebAuthn:
     target: https://www.w3.org/TR/2026/REC-webauthn-3-20260825/
     title: "Web Authentication: An API for accessing Public Key Credentials - Level 3"
@@ -211,12 +205,6 @@ facliv:
   and "facliv" is a determination that the presented face is live.
   Where both were performed, both values are included.
 
-## "sqa" (Security Question Answers) Method {#sqaMethod}
-
-{:vspace}
-sqa:
-: Security Question Answers
-
 ## "passkey" (Passkey) Method {#passkeyMethod}
 
 {:vspace}
@@ -297,9 +285,6 @@ The security considerations defined in
 Authentication Method Reference Values {{RFC8176}}
 apply to this specification.
 
-Note that security questions are not acceptable authentication secrets
-under current NIST guidance {{SP800-63-4}}.
-
 
 # Privacy Considerations
 
@@ -372,13 +357,6 @@ established by {{RFC8176}}.
 * Authentication Method Reference Description: Facial Liveness Check
 * Change Controller: IETF
 * Specification Document(s): {{faclivMethod}} of this specification
-
-### "sqa" Method
-
-* Authentication Method Reference Name: sqa
-* Authentication Method Reference Description: Security Question Answers
-* Change Controller: IETF
-* Specification Document(s): {{sqaMethod}} of this specification
 
 ### "passkey" Method
 
@@ -503,6 +481,8 @@ for their contributions to the specification.
 * Stated that "facliv" and "face" {{RFC8176}} describe different determinations and are included together where both were performed, and added a reference to {{ISO30107-1}}.
 * Added a reference for "passkey" to {{WebAuthn}}.
 * Added a section on composing values, and appendices giving examples and common compositions.
+* Removed "sqa". Current NIST guidance treats knowledge-based authentication and security questions as the same family, and "kba" {{RFC8176}} already covers it.
+* Removed the Security Considerations note on security questions, which applied to "sqa".
 * Added Max Gerber to the acknowledgments.
 
 -02
