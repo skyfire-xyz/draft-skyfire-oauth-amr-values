@@ -385,7 +385,7 @@ established by {{RFC8176}}.
 
 # Examples {#examples}
 
-The following "amr" claim value indicates that a one-time code
+The following "amr" claim value indicates that a code
 was sent to the user over the e-mail channel and entered by the user:
 
 ~~~
