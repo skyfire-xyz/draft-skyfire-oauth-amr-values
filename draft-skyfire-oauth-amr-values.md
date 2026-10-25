@@ -216,7 +216,7 @@ passkey:
 {:vspace}
 mdc:
 : Use of a multi-device credential as defined by {{WebAuthn}},
-  that is, a backup eligible credential,
+  that is, a backup-eligible credential,
   which may be backed up and synchronized to other devices.
   Multi-device credentials are commonly referred to as synced passkeys.
   A WebAuthn Relying Party learns whether a credential is backup eligible
