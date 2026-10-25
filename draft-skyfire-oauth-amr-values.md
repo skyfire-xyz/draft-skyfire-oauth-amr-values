@@ -439,7 +439,7 @@ Voice one-time code, where a call conveys a code that the user then enters:
 Call-back confirmation, where the user confirms during the call itself:
 : `["tel"]`
 
-Authenticator application one-time password, also called TOTP:
+Authenticator application one-time password:
 : `["app", "otp"]`
 
 Push approval:
