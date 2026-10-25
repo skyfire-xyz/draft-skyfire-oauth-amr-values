@@ -80,9 +80,8 @@ Table of Contents
      3.6.  "url" (URL provided to and clicked on by user) Method
      3.7.  "push" (Push notification to mobile phone) Method
      3.8.  "facliv" (Facial Liveness Check) Method
-     3.9.  "sqa" (Security Question Answers) Method
-     3.10. "passkey" (Passkey) Method
-     3.11. "uv" (User Verification) Method
+     3.9.  "passkey" (Passkey) Method
+     3.10. "uv" (User Verification) Method
    4.  Updated Authentication Method Reference Value
      4.1.  "tel" (Telephone Call) Method
    5.  Composing Authentication Method Reference Values
@@ -98,10 +97,9 @@ Table of Contents
        8.1.6.  "url" Method
        8.1.7.  "push" Method
        8.1.8.  "facliv" Method
-       8.1.9.  "sqa" Method
-       8.1.10. "passkey" Method
-       8.1.11. "uv" Method
-       8.1.12. "tel" Method
+       8.1.9.  "passkey" Method
+       8.1.10. "uv" Method
+       8.1.11. "tel" Method
    9.  References
      9.1.  Normative References
      9.2.  Informative References
@@ -207,18 +205,13 @@ Table of Contents
       determination that the presented face is live.  Where both were
       performed, both values are included.
 
-3.9.  "sqa" (Security Question Answers) Method
-
-   sqa:
-      Security Question Answers
-
-3.10.  "passkey" (Passkey) Method
+3.9.  "passkey" (Passkey) Method
 
    passkey:
       A passkey, that is, a client-side discoverable credential as
       defined by [WebAuthn].
 
-3.11.  "uv" (User Verification) Method
+3.10.  "uv" (User Verification) Method
 
    uv:
       User verification.  Local authorization of the authenticator by an
@@ -287,9 +280,6 @@ Table of Contents
 
    The security considerations defined in Authentication Method
    Reference Values [RFC8176] apply to this specification.
-
-   Note that security questions are not acceptable authentication
-   secrets under current NIST guidance [SP800-63-4].
 
 7.  Privacy Considerations
 
@@ -390,18 +380,7 @@ Table of Contents
 
    *  Specification Document(s): Section 3.8 of this specification
 
-8.1.9.  "sqa" Method
-
-   *  Authentication Method Reference Name: sqa
-
-   *  Authentication Method Reference Description: Security Question
-      Answers
-
-   *  Change Controller: IETF
-
-   *  Specification Document(s): Section 3.9 of this specification
-
-8.1.10.  "passkey" Method
+8.1.9.  "passkey" Method
 
    *  Authentication Method Reference Name: passkey
 
@@ -409,9 +388,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.10 of this specification
+   *  Specification Document(s): Section 3.9 of this specification
 
-8.1.11.  "uv" Method
+8.1.10.  "uv" Method
 
    *  Authentication Method Reference Name: uv
 
@@ -419,9 +398,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.11 of this specification
+   *  Specification Document(s): Section 3.10 of this specification
 
-8.1.12.  "tel" Method
+8.1.11.  "tel" Method
 
    *  Authentication Method Reference Name: tel
 
@@ -481,11 +460,6 @@ Table of Contents
    [RFC7519]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web Token
               (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015,
               <https://www.rfc-editor.org/rfc/rfc7519>.
-
-   [SP800-63-4]
-              National Institute of Standards (NIST), "NIST SP 800-63-4:
-              Digital Identity Guidelines", July 2025,
-              <https://pages.nist.gov/800-63-4/sp800-63.html>.
 
    [WebAuthn] Cappalli, T., Kumar, A., Lundberg, E., Miller, M., Pascoe,
               and N. Satragno, "Web Authentication: An API for accessing
@@ -592,6 +566,13 @@ Document History
 
    *  Added a section on composing values, and appendices giving
       examples and common compositions.
+
+   *  Removed "sqa".  Current NIST guidance treats knowledge-based
+      authentication and security questions as the same family, and
+      "kba" [RFC8176] already covers it.
+
+   *  Removed the Security Considerations note on security questions,
+      which applied to "sqa".
 
    *  Added Max Gerber to the acknowledgments.
 
