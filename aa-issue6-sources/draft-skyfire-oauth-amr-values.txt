@@ -496,7 +496,8 @@ Table of Contents
    [CAMARA.NumberVerification]
               CAMARA Project, "Number Verification API, version 2.1.0",
               2025,
-              <https://github.com/camaraproject/NumberVerification>.
+              <https://github.com/camaraproject/NumberVerification/blob/r3.2/
+              code/API_definitions/number-verification.yaml>.
 
    [I-D.skyfire-oauth-kyapay-token]
               Agarwal, A. and M. B. Jones, "KYAPay Token", Work in
