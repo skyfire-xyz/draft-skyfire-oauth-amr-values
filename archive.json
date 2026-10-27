@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-10-01T01:00:49.525987+00:00",
+  "timestamp": "2026-10-27T00:46:31.339083+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -419,6 +419,323 @@
           "body": "lgtm",
           "createdAt": "2026-09-28T17:03:35Z",
           "updatedAt": "2026-09-28T17:03:35Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOTL-pLM8AAAABKhMn4A",
+      "title": "Address Max Gerber's review comments",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9",
+      "state": "OPEN",
+      "author": "skyfire-ankit",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Resolves the comments in Max Gerber's review of -02 on the OAuth list (6 October), as described in the reply of 18 October.\n\nAddresses #8. Partially addresses #6.\n\n**Changes**\n\n- **\"app\"**: defined by the property it describes rather than by product names. An issuer includes it only where it knows an authenticator application was used, since a code from a shared secret does not reveal what produced it.\n- **\"bg\"**: definition unchanged, with a sentence stating that \"sna\" is a subset of it and pointing to \"geo\" and \"rba\" in RFC 8176.\n- **\"sna\"**: new value for silent network authentication.\n- **\"email\"**: narrowed to the channel. What was delivered is described by an accompanying value such as \"code\" or \"url\", the approach -02 took for \"tel\".\n- **\"facliv\"**: defined as a liveness (presentation attack detection) determination, with a reference to ISO/IEC 30107-1, and a statement that it and \"face\" are different determinations, both included where both were performed. The IANA description changes from \"Facial Recognition with Liveness Check\" to \"Facial Liveness Check\" to match.\n- **\"passkey\"**: reference to WebAuthn Level 3, which defines the term.\n- **\"uv\"**: new value for user verification, distinct from RFC 8176's \"user\", which is a presence test.\n- New section: Composing Authentication Method Reference Values.\n- New appendices: Examples, and Common Compositions.\n- Max Gerber added to the Acknowledgments; -03 Document History.\n\n**Removal of \"sqa\" (second commit)**\n\nProposed on the list on 18 October, with an invitation to produce a source separating security questions from knowledge-based authentication. None has been raised. The commit removes the value, its IANA registration, the Security Considerations note added in -02 for it, and the SP800-63-4 reference that note was the only citation of. It can be reverted on its own if a counter-source turns up.\n\n**Not in this PR**\n\n- A value for multi-device credentials (synced passkeys) follows in a separate PR, as the reply said.\n- Rob Zagarella's `auth_time` point belongs in draft-skyfire-oauth-kyapay-token.\n\n@selfissued for review. Max, we will add you as a reviewer once we have your GitHub ID.",
+      "createdAt": "2026-10-25T01:42:44Z",
+      "updatedAt": "2026-10-26T09:56:50Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "main",
+      "baseRefOid": "3fdd30de1bdf34991d66945202ed3b97f3e3f99c",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "aa-max-review",
+      "headRefOid": "e97a8283a068a014cd897e3f090360185c27491c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Please review @max-stytch",
+          "createdAt": "2026-10-25T09:58:18Z",
+          "updatedAt": "2026-10-25T09:58:18Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUDptsg",
+          "commit": {
+            "abbreviatedOid": "0300d1f"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udfe2 Approval recommended\n\nThe remaining feedback concerns minor terminology and example clarifications, with no blocking issues identified.\n\n<details open>\n<summary><strong>3 open issues</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Distinguish channel-delivered OTPs from locally generated OTPs](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268455) \u00b7 New\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Ensure the example explicitly conveys the code&#39;s one-time property](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268469) \u00b7 New\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Avoid equating authenticator-app OTPs with TOTP](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268477) \u00b7 New\n</details>\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nThis PR clarifies authentication method reference values and their composition in the OAuth draft, addressing overlap guidance in #8 and part of the reference work in #6.\n\n**Changes:**\n- Refines existing definitions, adds `sna` and `uv`, and removes `sqa`.\n- Adds composition guidance, examples, and common combinations.\n- Updates references, IANA registrations, acknowledgments, and document history.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| draft-skyfire-oauth-amr-values.md | Updates authentication method definitions, registrations, references, and composition guidance. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T01:45:32Z",
+          "updatedAt": "2026-10-25T01:45:33Z",
+          "comments": [
+            {
+              "originalPosition": 150,
+              "body": "Describing \"otp\" as having the same channel-delivered semantics excludes locally generated one-time passwords, which RFC 8176 also covers and the authenticator-application example below explicitly uses. Please distinguish these cases so the composition guidance does not imply that \"otp\" requires a delivery channel.",
+              "createdAt": "2026-10-25T01:45:33Z",
+              "updatedAt": "2026-10-25T01:45:33Z"
+            },
+            {
+              "originalPosition": 236,
+              "body": "The `code` definition only says that a code was provided to and entered by the user; it does not assert single-use. Consequently, `[\"email\", \"code\"]` does not convey the one-time property claimed here. Describe this as a code, or include `otp` in the array if the example is intended to communicate that property.",
+              "createdAt": "2026-10-25T01:45:33Z",
+              "updatedAt": "2026-10-25T01:45:33Z"
+            },
+            {
+              "originalPosition": 289,
+              "body": "Non-blocking: an authenticator application's one-time password is not necessarily TOTP; applications can also generate counter-based HOTP. Calling the whole category TOTP incorrectly equates those algorithms. Drop the alias, or narrow the label specifically to time-based one-time passwords.",
+              "createdAt": "2026-10-25T01:45:33Z",
+              "updatedAt": "2026-10-25T01:45:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUDw9gA",
+          "commit": {
+            "abbreviatedOid": "9802017"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udd35 Needs a closer look\n\nThe security-sensitive method definitions need specialist validation against the cited external standards, which remain unverified.\n\n<details open>\n<summary><strong>1 open issue</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Avoid equating authenticator-app OTPs with TOTP](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268477)\n</details>\n\n<details>\n<summary><strong>1 previously missed issue</strong></summary>\n\nIn code that hasn't changed since last review\n\n<details>\n<summary><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> Add otp to convey the email code is one-time</summary>\n\n`draft-skyfire-oauth-amr-values.md:426`\n\nThis email OTP mapping does not convey the one-time property: \"email\" identifies the channel, while \"code\" identifies a code provided to and entered by the user. Include \"otp\" so issuers following this mapping also communicate that the code is a one-time password.\n</details>\n</details>\n\n<details>\n<summary><strong>2 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Ensure the example explicitly conveys the code&#39;s one-time property](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268469)\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Distinguish channel-delivered OTPs from locally generated OTPs](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268455)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T02:10:19Z",
+          "updatedAt": "2026-10-25T02:10:19Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUDxp-A",
+          "commit": {
+            "abbreviatedOid": "f84cf20"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udd35 Needs a closer look\n\nThe security-relevant definitions and composition guidance warrant final validation by an authentication standards expert.\n\n**No open issues** \ud83c\udf89\n\n<details>\n<summary><strong>1 resolved since last review</strong></summary>\n\n- <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.svg\"><img src=\"https://github.githubassets.com/static/images/icons/copilot-code-review/low-v2-light.png\" alt=\"Low severity\" width=\"62\" height=\"18\" align=\"texttop\"></picture> [Avoid equating authenticator-app OTPs with TOTP](https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9#discussion_r4369268477)\n</details>\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T02:12:21Z",
+          "updatedAt": "2026-10-25T02:12:21Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUDyX2w",
+          "commit": {
+            "abbreviatedOid": "b7ec212"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udd35 Needs a closer look\n\nThe new authentication-method semantics and composition guidance warrant domain-expert validation of their security and interoperability implications.\n\n**No open issues** \ud83c\udf89\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T02:14:19Z",
+          "updatedAt": "2026-10-25T02:14:19Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUD1gOw",
+          "commit": {
+            "abbreviatedOid": "f9f5ed8"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udd35 Needs a closer look\n\nThe authentication-claim semantics and mappings to external standards need final validation by an OAuth/WebAuthn domain expert.\n\n**No open issues** \ud83c\udf89\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T02:27:44Z",
+          "updatedAt": "2026-10-25T02:27:44Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUFeVzg",
+          "commit": {
+            "abbreviatedOid": "f9f5ed8"
+          },
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-10-25T11:15:43Z",
+          "updatedAt": "2026-10-25T11:15:43Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUGQeZg",
+          "commit": {
+            "abbreviatedOid": "f9f5ed8"
+          },
+          "author": "max-stytch",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Thank you, this is great! I left some thoughts around the interpretation of multiple composed multi-value amr claims.",
+          "createdAt": "2026-10-25T14:41:04Z",
+          "updatedAt": "2026-10-25T14:56:44Z",
+          "comments": [
+            {
+              "originalPosition": 151,
+              "body": "editorial nit- put the subject of the sentence first instead of introducing indirectly\n\n```suggestion\nThe \"email\" and \"push\" values registered by this specification describe the channel by which an authentication interaction reached the person.\n```",
+              "createdAt": "2026-10-25T14:41:04Z",
+              "updatedAt": "2026-10-25T14:56:44Z"
+            },
+            {
+              "originalPosition": 157,
+              "body": "```suggestion\nThe \"code\" and \"url\" values describe challenges delivered over such a channel, which the person must return to the verifier to complete authentication.\n```",
+              "createdAt": "2026-10-25T14:42:20Z",
+              "updatedAt": "2026-10-25T14:56:44Z"
+            },
+            {
+              "originalPosition": 148,
+              "body": "When a single authentication event is described by more than one value, is it important that the consumer can determine which values correspond to which events? Does ordering of the `amr` claim have any intrinsic meaning? Suppose a user completes __both__ an email magic link and a push-based code entry as part of authentication. Should `amr` be `[\"email\", \"url\", \"push\", \"code\"]` with an inherent `email -> url` and `push -> code` linking? Or would something like `[\"code\", \"url\", \"push\", \"email\"]` be acceptable as well?\n\nSince `amr` has no ordering semantics today, I don't know if we can add them on later... but perhaps we should be should be explicit about that here?",
+              "createdAt": "2026-10-25T14:52:42Z",
+              "updatedAt": "2026-10-25T14:56:44Z"
+            },
+            {
+              "originalPosition": 247,
+              "body": "Thank you - these sections are great!",
+              "createdAt": "2026-10-25T14:53:53Z",
+              "updatedAt": "2026-10-25T14:56:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUGmlIg",
+          "commit": {
+            "abbreviatedOid": "e97a828"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udd35 Needs a closer look\n\nThe security-sensitive definitions and composition guidance need human standards review to confirm alignment with RFC 8176 and WebAuthn.\n\n**No open issues** \ud83c\udf89\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T16:08:24Z",
+          "updatedAt": "2026-10-25T16:08:24Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUGoSQA",
+          "commit": {
+            "abbreviatedOid": "f9f5ed8"
+          },
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-10-25T16:17:20Z",
+          "updatedAt": "2026-10-25T16:17:20Z",
+          "comments": [
+            {
+              "originalPosition": 148,
+              "body": "Hi @max-stytch I like your idea. Do you have thoughts on how to group and order these together? Should items that relate to each other be turned into tuples for example - (\"email\", \"url\") and (\"push\", \"code\") - and then on top of that ordering is applied so individual \"email\" came before \"url\" and \"push\" came before \"code\" and then together say (\"email\", \"url\") came before (\"push\", \"code\") so the final would be [(\"email\", \"url\"), (\"push\", \"code\")]. But this would've worked in Python not in the RFC 8176 specification which says the claim is a \"flat, single-dimensional array of case-sensitive strings\". WDYT about something like\r\n1. \"amr\": [\"email:url\", \"push:code\"], OR\r\n2. \"amr\": [\"email,url\", \"push,code\"]\r\n\r\n@selfissued WDYT?\r\n\r\nI think this would still depend on the system knowing this information so we may have to still allow for the flat and un-ordered single item version.",
+              "createdAt": "2026-10-25T16:17:20Z",
+              "updatedAt": "2026-10-25T16:17:20Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUMa91A",
+          "commit": {
+            "abbreviatedOid": "f9f5ed8"
+          },
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-10-26T09:56:50Z",
+          "updatedAt": "2026-10-26T09:56:50Z",
+          "comments": [
+            {
+              "originalPosition": 148,
+              "body": "Trying to define ordering or grouping is beyond what we should do at this point without working group discussion and consensus to do so.  The definition of \"amr\" at [2.](https://openid.net/specs/openid-connect-core-1_0.html#IDToken)  ID Token is:\r\n\r\n> amr\r\n> OPTIONAL. Authentication Methods References. JSON array of strings that are identifiers for authentication methods used in the authentication. For instance, values might indicate that both password and OTP authentication methods were used. The amr value is an array of case-sensitive strings. Values used in the amr Claim SHOULD be from those registered in the IANA Authentication Method Reference Values registry [[IANA.AMR]](https://openid.net/specs/openid-connect-core-1_0.html#IANA.AMR) established by [[RFC8176]](https://openid.net/specs/openid-connect-core-1_0.html#RFC8176); parties using this claim will need to agree upon the meanings of any unregistered values used, which may be context specific.\r\n\r\nIt says nothing about order or groupings.\r\n\r\nIf you want to file an issue about this, @max-stytch, so the idea isn't lost, go for it, but I don't think we should do it in this PR.\r\n",
+              "createdAt": "2026-10-26T09:56:50Z",
+              "updatedAt": "2026-10-26T09:56:50Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOTL-pLM8AAAABKhNRqg",
+      "title": "Add \"mdc\" for multi-device credentials (synced passkeys)",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/10",
+      "state": "OPEN",
+      "author": "skyfire-ankit",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Stacked on #9. Retarget to `main` once #9 merges.\n\nThis follows up the passkey item in Max Gerber's review and Jean Diaconu's earlier point that device-bound and synced passkeys cannot be told apart with one flat value. The list reply of 18 October proposed one value on the replication axis, \"wording to follow\". This is the wording.\n\n**What it adds**\n\n- **\"mdc\"**: use of a multi-device credential as defined by WebAuthn Level 3, that is, a backup eligible credential, commonly called a synced passkey. A Relying Party learns this from the flags in the authenticator data.\n- Composition with \"hwk\" and \"swk\" from RFC 8176, which describe how a key is protected rather than whether it is replicated. Together they express all four combinations.\n- A Common Compositions row for synced passkeys.\n- IANA registration and Document History entry.\n\n**Why not \"swk\" for synced passkeys**\n\nOur earlier answer to Jean mapped synced passkeys to \"swk\". A synced passkey can be held in hardware-backed storage on each device it reaches, so \"software-secured\" is not reliably true, and the property a relying party needs here is replication, which \"hwk\" and \"swk\" do not describe.\n\n**Open for views**\n\n- The name. \"mdc\" follows WebAuthn's term.\n- The absence of \"mdc\" says nothing: an issuer that does not know whether a credential is backup eligible omits it. If relying parties need a positive single-device signal, that would be a second value. This PR does not propose one.\n\n@selfissued, views especially welcome given your WebAuthn background.",
+      "createdAt": "2026-10-25T01:44:36Z",
+      "updatedAt": "2026-10-25T16:24:23Z",
+      "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "baseRefName": "aa-max-review",
+      "baseRefOid": "0300d1f4214b9cac06059fc801d101b750015c6b",
+      "headRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
+      "headRefName": "aa-mdc",
+      "headRefOid": "7c630f754fab9380d80428ab883ba100111d2f5c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Please review @max-stytch",
+          "createdAt": "2026-10-25T09:58:45Z",
+          "updatedAt": "2026-10-25T09:58:45Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUDpxNQ",
+          "commit": {
+            "abbreviatedOid": "0dfeaa7"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udfe2 Approval recommended\n\nThe focused specification changes are consistent with the stated scope, with no unresolved findings.\n\n**No open issues** \ud83c\udf89\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nAdds `mdc` to the authentication method reference specification to identify backup-eligible, multi-device credentials, commonly called synced passkeys.\n\n**Changes:**\n- Defines `mdc` independently of key protection and clarifies that its absence does not imply a single-device credential.\n- Explains composition with `hwk` and `swk` and adds a synced-passkey example.\n- Adds the IANA registration and Document History entry.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| draft-skyfire-oauth-amr-values.md | Defines and registers `mdc`, documents composition, and updates examples and history. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T01:46:01Z",
+          "updatedAt": "2026-10-25T01:46:01Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUFfhEg",
+          "commit": {
+            "abbreviatedOid": "0dfeaa7"
+          },
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-10-25T11:22:15Z",
+          "updatedAt": "2026-10-25T11:22:16Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\n  that is, a backup-eligible credential,\n```",
+              "createdAt": "2026-10-25T11:22:16Z",
+              "updatedAt": "2026-10-25T11:22:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUFf9OA",
+          "commit": {
+            "abbreviatedOid": "0dfeaa7"
+          },
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-10-25T11:23:35Z",
+          "updatedAt": "2026-10-25T11:23:35Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOTL-pLM8AAAABUGpohg",
+          "commit": {
+            "abbreviatedOid": "7c630f7"
+          },
+          "author": "copilot-pull-request-reviewer",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udfe2 Approval recommended\n\nThe focused specification changes are internally consistent, match the stated scope, and have no unresolved findings.\n\n**No open issues** \ud83c\udf89\n\n<sub>Review effort: Balanced</sub>",
+          "createdAt": "2026-10-25T16:24:22Z",
+          "updatedAt": "2026-10-25T16:24:23Z",
           "comments": []
         }
       ]
