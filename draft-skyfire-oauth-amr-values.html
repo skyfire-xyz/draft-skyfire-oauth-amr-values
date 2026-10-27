@@ -1204,7 +1204,10 @@ authentication methods in use today.<a href="#section-abstract-1" class="pilcrow
                 <p id="section-toc.1-1.3.2.9.1"><a href="#section-3.9" class="auto internal xref">3.9</a>.  <a href="#name-passkey-passkey-method" class="internal xref">"passkey" (Passkey) Method</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.10">
-                <p id="section-toc.1-1.3.2.10.1"><a href="#section-3.10" class="auto internal xref">3.10</a>. <a href="#name-uv-user-verification-method" class="internal xref">"uv" (User Verification) Method</a></p>
+                <p id="section-toc.1-1.3.2.10.1"><a href="#section-3.10" class="auto internal xref">3.10</a>. <a href="#name-mdc-multi-device-credential" class="internal xref">"mdc" (Multi-Device Credential) Method</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.11">
+                <p id="section-toc.1-1.3.2.11.1"><a href="#section-3.11" class="auto internal xref">3.11</a>. <a href="#name-uv-user-verification-method" class="internal xref">"uv" (User Verification) Method</a></p>
 </li>
             </ul>
 </li>
@@ -1259,10 +1262,13 @@ authentication methods in use today.<a href="#section-abstract-1" class="pilcrow
                     <p id="section-toc.1-1.8.2.1.2.9.1"><a href="#section-8.1.9" class="auto internal xref">8.1.9</a>.  <a href="#name-passkey-method" class="internal xref">"passkey" Method</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1.2.10">
-                    <p id="section-toc.1-1.8.2.1.2.10.1"><a href="#section-8.1.10" class="auto internal xref">8.1.10</a>. <a href="#name-uv-method" class="internal xref">"uv" Method</a></p>
+                    <p id="section-toc.1-1.8.2.1.2.10.1"><a href="#section-8.1.10" class="auto internal xref">8.1.10</a>. <a href="#name-mdc-method" class="internal xref">"mdc" Method</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1.2.11">
-                    <p id="section-toc.1-1.8.2.1.2.11.1"><a href="#section-8.1.11" class="auto internal xref">8.1.11</a>. <a href="#name-tel-method" class="internal xref">"tel" Method</a></p>
+                    <p id="section-toc.1-1.8.2.1.2.11.1"><a href="#section-8.1.11" class="auto internal xref">8.1.11</a>. <a href="#name-uv-method" class="internal xref">"uv" Method</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1.2.12">
+                    <p id="section-toc.1-1.8.2.1.2.12.1"><a href="#section-8.1.12" class="auto internal xref">8.1.12</a>. <a href="#name-tel-method" class="internal xref">"tel" Method</a></p>
 </li>
                 </ul>
 </li>
@@ -1485,23 +1491,47 @@ Where both were performed, both values are included.<a href="#section-3.8-1.2.2"
 </dl>
 </section>
 </div>
-<div id="uvMethod">
+<div id="mdcMethod">
 <section id="section-3.10">
-        <h3 id="name-uv-user-verification-method">
-<a href="#section-3.10" class="section-number selfRef">3.10. </a><a href="#name-uv-user-verification-method" class="section-name selfRef">"uv" (User Verification) Method</a>
+        <h3 id="name-mdc-multi-device-credential">
+<a href="#section-3.10" class="section-number selfRef">3.10. </a><a href="#name-mdc-multi-device-credential" class="section-name selfRef">"mdc" (Multi-Device Credential) Method</a>
         </h3>
 <span class="break"></span><dl class="dlNewline" id="section-3.10-1">
-          <dt id="section-3.10-1.1">uv:</dt>
+          <dt id="section-3.10-1.1">mdc:</dt>
           <dd style="margin-left: 1.5em" id="section-3.10-1.2">
-            <p id="section-3.10-1.2.1">User verification.
+            <p id="section-3.10-1.2.1">Use of a multi-device credential as defined by <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span>,
+that is, a backup-eligible credential,
+which may be backed up and synchronized to other devices.
+Multi-device credentials are commonly referred to as synced passkeys.
+A WebAuthn Relying Party learns whether a credential is backup eligible
+from the flags in the authenticator data.<a href="#section-3.10-1.2.1" class="pilcrow">¶</a></p>
+<p id="section-3.10-1.2.2">This value describes whether a credential may be replicated.
+It is independent of how the key is protected on any one device,
+which "hwk" and "swk" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> describe.
+Where both are known, both are included.<a href="#section-3.10-1.2.2" class="pilcrow">¶</a></p>
+<p id="section-3.10-1.2.3">The absence of this value does not indicate that a credential is a single-device credential.<a href="#section-3.10-1.2.3" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="uvMethod">
+<section id="section-3.11">
+        <h3 id="name-uv-user-verification-method">
+<a href="#section-3.11" class="section-number selfRef">3.11. </a><a href="#name-uv-user-verification-method" class="section-name selfRef">"uv" (User Verification) Method</a>
+        </h3>
+<span class="break"></span><dl class="dlNewline" id="section-3.11-1">
+          <dt id="section-3.11-1.1">uv:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.11-1.2">
+            <p id="section-3.11-1.2.1">User verification.
 Local authorization of the authenticator by an authorization gesture
 capable of distinguishing individual users,
-such as a PIN, a password, or biometric recognition <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span>.<a href="#section-3.10-1.2.1" class="pilcrow">¶</a></p>
-<p id="section-3.10-1.2.2">This is distinct from "user" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>, which is a test of user presence.
+such as a PIN, a password, or biometric recognition <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span>.<a href="#section-3.11-1.2.1" class="pilcrow">¶</a></p>
+<p id="section-3.11-1.2.2">This is distinct from "user" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>, which is a test of user presence.
 As <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span> states, a user presence test
 "is not capable of biometric recognition,
-nor does it involve the presentation of a shared secret such as a password or PIN".<a href="#section-3.10-1.2.2" class="pilcrow">¶</a></p>
-<p id="section-3.10-1.2.3">This value does not identify which modality the authenticator used.<a href="#section-3.10-1.2.3" class="pilcrow">¶</a></p>
+nor does it involve the presentation of a shared secret such as a password or PIN".<a href="#section-3.11-1.2.2" class="pilcrow">¶</a></p>
+<p id="section-3.11-1.2.3">This value does not identify which modality the authenticator used.<a href="#section-3.11-1.2.3" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1793,44 +1823,65 @@ established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<
           </ul>
 </section>
 </div>
-<div id="uv-method">
+<div id="mdc-method">
 <section id="section-8.1.10">
-          <h4 id="name-uv-method">
-<a href="#section-8.1.10" class="section-number selfRef">8.1.10. </a><a href="#name-uv-method" class="section-name selfRef">"uv" Method</a>
+          <h4 id="name-mdc-method">
+<a href="#section-8.1.10" class="section-number selfRef">8.1.10. </a><a href="#name-mdc-method" class="section-name selfRef">"mdc" Method</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-8.1.10-1.1">
-              <p id="section-8.1.10-1.1.1">Authentication Method Reference Name: uv<a href="#section-8.1.10-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-8.1.10-1.1.1">Authentication Method Reference Name: mdc<a href="#section-8.1.10-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-8.1.10-1.2">
-              <p id="section-8.1.10-1.2.1">Authentication Method Reference Description: User Verification<a href="#section-8.1.10-1.2.1" class="pilcrow">¶</a></p>
+              <p id="section-8.1.10-1.2.1">Authentication Method Reference Description: Multi-Device Credential<a href="#section-8.1.10-1.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-8.1.10-1.3">
               <p id="section-8.1.10-1.3.1">Change Controller: IETF<a href="#section-8.1.10-1.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-8.1.10-1.4">
-              <p id="section-8.1.10-1.4.1">Specification Document(s): <a href="#uvMethod" class="auto internal xref">Section 3.10</a> of this specification<a href="#section-8.1.10-1.4.1" class="pilcrow">¶</a></p>
+              <p id="section-8.1.10-1.4.1">Specification Document(s): <a href="#mdcMethod" class="auto internal xref">Section 3.10</a> of this specification<a href="#section-8.1.10-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
 </div>
-<div id="tel-method">
+<div id="uv-method">
 <section id="section-8.1.11">
-          <h4 id="name-tel-method">
-<a href="#section-8.1.11" class="section-number selfRef">8.1.11. </a><a href="#name-tel-method" class="section-name selfRef">"tel" Method</a>
+          <h4 id="name-uv-method">
+<a href="#section-8.1.11" class="section-number selfRef">8.1.11. </a><a href="#name-uv-method" class="section-name selfRef">"uv" Method</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-8.1.11-1.1">
-              <p id="section-8.1.11-1.1.1">Authentication Method Reference Name: tel<a href="#section-8.1.11-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-8.1.11-1.1.1">Authentication Method Reference Name: uv<a href="#section-8.1.11-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-8.1.11-1.2">
-              <p id="section-8.1.11-1.2.1">Authentication Method Reference Description: Telephone call to the user at a registered number<a href="#section-8.1.11-1.2.1" class="pilcrow">¶</a></p>
+              <p id="section-8.1.11-1.2.1">Authentication Method Reference Description: User Verification<a href="#section-8.1.11-1.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-8.1.11-1.3">
               <p id="section-8.1.11-1.3.1">Change Controller: IETF<a href="#section-8.1.11-1.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-8.1.11-1.4">
-              <p id="section-8.1.11-1.4.1">Specification Document(s): <a href="#telMethod" class="auto internal xref">Section 4.1</a> of this specification<a href="#section-8.1.11-1.4.1" class="pilcrow">¶</a></p>
+              <p id="section-8.1.11-1.4.1">Specification Document(s): <a href="#uvMethod" class="auto internal xref">Section 3.11</a> of this specification<a href="#section-8.1.11-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+</section>
+</div>
+<div id="tel-method">
+<section id="section-8.1.12">
+          <h4 id="name-tel-method">
+<a href="#section-8.1.12" class="section-number selfRef">8.1.12. </a><a href="#name-tel-method" class="section-name selfRef">"tel" Method</a>
+          </h4>
+<ul class="normal">
+<li class="normal" id="section-8.1.12-1.1">
+              <p id="section-8.1.12-1.1.1">Authentication Method Reference Name: tel<a href="#section-8.1.12-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-8.1.12-1.2">
+              <p id="section-8.1.12-1.2.1">Authentication Method Reference Description: Telephone call to the user at a registered number<a href="#section-8.1.12-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-8.1.12-1.3">
+              <p id="section-8.1.12-1.3.1">Change Controller: IETF<a href="#section-8.1.12-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-8.1.12-1.4">
+              <p id="section-8.1.12-1.4.1">Specification Document(s): <a href="#telMethod" class="auto internal xref">Section 4.1</a> of this specification<a href="#section-8.1.12-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -2014,6 +2065,12 @@ and <code>["sms"]</code> remains correct.<a href="#appendix-B-2.6.1" class="pilc
         <dd style="margin-left: 1.5em" id="appendix-B-2.22">
           <p id="appendix-B-2.22.1"><code>["passkey", "hwk"]</code><a href="#appendix-B-2.22.1" class="pilcrow">¶</a></p>
 </dd>
+        <dd class="break"></dd>
+<dt id="appendix-B-2.23">Synced passkey:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-B-2.24">
+          <p id="appendix-B-2.24.1"><code>["passkey", "mdc"]</code>.
+"hwk" or "swk" is added where the issuer knows how the key is protected.<a href="#appendix-B-2.24.1" class="pilcrow">¶</a></p>
+</dd>
       <dd class="break"></dd>
 </dl>
 </section>
@@ -2043,31 +2100,34 @@ for their contributions to the specification.<a href="#appendix-C-1" class="pilc
           <p id="appendix-D-3.1.1">Added "sna" for silent network authentication, a specific case of the background authentication described by "bg".<a href="#appendix-D-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.2">
-          <p id="appendix-D-3.2.1">Added "uv" for user verification, distinct from the user presence test described by "user" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<a href="#appendix-D-3.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.2.1">Added "mdc" for multi-device credentials, commonly called synced passkeys, which composes with "hwk" and "swk" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<a href="#appendix-D-3.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.3">
-          <p id="appendix-D-3.3.1">Redefined "app" by the property it describes rather than by product examples, and stated when an issuer can assert it.<a href="#appendix-D-3.3.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.3.1">Added "uv" for user verification, distinct from the user presence test described by "user" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<a href="#appendix-D-3.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.4">
-          <p id="appendix-D-3.4.1">Narrowed "email" to the channel, with what was delivered over it described by an accompanying value.<a href="#appendix-D-3.4.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.4.1">Redefined "app" by the property it describes rather than by product examples, and stated when an issuer can assert it.<a href="#appendix-D-3.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.5">
-          <p id="appendix-D-3.5.1">Stated that "facliv" and "face" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> describe different determinations and are included together where both were performed, and added a reference to <span>[<a href="#ISO30107-1" class="cite xref">ISO30107-1</a>]</span>.<a href="#appendix-D-3.5.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.5.1">Narrowed "email" to the channel, with what was delivered over it described by an accompanying value.<a href="#appendix-D-3.5.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.6">
-          <p id="appendix-D-3.6.1">Added a reference for "passkey" to <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span>.<a href="#appendix-D-3.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.6.1">Stated that "facliv" and "face" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> describe different determinations and are included together where both were performed, and added a reference to <span>[<a href="#ISO30107-1" class="cite xref">ISO30107-1</a>]</span>.<a href="#appendix-D-3.6.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.7">
-          <p id="appendix-D-3.7.1">Added a section on composing values, and appendices giving examples and common compositions.<a href="#appendix-D-3.7.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.7.1">Added a reference for "passkey" to <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span>.<a href="#appendix-D-3.7.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.8">
-          <p id="appendix-D-3.8.1">Removed "sqa". Current NIST guidance treats knowledge-based authentication and security questions as the same family, and "kba" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> already covers it.<a href="#appendix-D-3.8.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.8.1">Added a section on composing values, and appendices giving examples and common compositions.<a href="#appendix-D-3.8.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.9">
-          <p id="appendix-D-3.9.1">Removed the Security Considerations note on security questions, which applied to "sqa".<a href="#appendix-D-3.9.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.9.1">Removed "sqa". Current NIST guidance treats knowledge-based authentication and security questions as the same family, and "kba" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> already covers it.<a href="#appendix-D-3.9.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.10">
-          <p id="appendix-D-3.10.1">Added Max Gerber to the acknowledgments.<a href="#appendix-D-3.10.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.10.1">Removed the Security Considerations note on security questions, which applied to "sqa".<a href="#appendix-D-3.10.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-D-3.11">
+          <p id="appendix-D-3.11.1">Added Max Gerber to the acknowledgments.<a href="#appendix-D-3.11.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="appendix-D-4">-02<a href="#appendix-D-4" class="pilcrow">¶</a></p>

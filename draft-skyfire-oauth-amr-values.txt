@@ -81,7 +81,8 @@ Table of Contents
      3.7.  "push" (Push notification to mobile phone) Method
      3.8.  "facliv" (Facial Liveness Check) Method
      3.9.  "passkey" (Passkey) Method
-     3.10. "uv" (User Verification) Method
+     3.10. "mdc" (Multi-Device Credential) Method
+     3.11. "uv" (User Verification) Method
    4.  Updated Authentication Method Reference Value
      4.1.  "tel" (Telephone Call) Method
    5.  Composing Authentication Method Reference Values
@@ -98,8 +99,9 @@ Table of Contents
        8.1.7.  "push" Method
        8.1.8.  "facliv" Method
        8.1.9.  "passkey" Method
-       8.1.10. "uv" Method
-       8.1.11. "tel" Method
+       8.1.10. "mdc" Method
+       8.1.11. "uv" Method
+       8.1.12. "tel" Method
    9.  References
      9.1.  Normative References
      9.2.  Informative References
@@ -211,7 +213,25 @@ Table of Contents
       A passkey, that is, a client-side discoverable credential as
       defined by [WebAuthn].
 
-3.10.  "uv" (User Verification) Method
+3.10.  "mdc" (Multi-Device Credential) Method
+
+   mdc:
+      Use of a multi-device credential as defined by [WebAuthn], that
+      is, a backup-eligible credential, which may be backed up and
+      synchronized to other devices.  Multi-device credentials are
+      commonly referred to as synced passkeys.  A WebAuthn Relying Party
+      learns whether a credential is backup eligible from the flags in
+      the authenticator data.
+
+      This value describes whether a credential may be replicated.  It
+      is independent of how the key is protected on any one device,
+      which "hwk" and "swk" [RFC8176] describe.  Where both are known,
+      both are included.
+
+      The absence of this value does not indicate that a credential is a
+      single-device credential.
+
+3.11.  "uv" (User Verification) Method
 
    uv:
       User verification.  Local authorization of the authenticator by an
@@ -393,7 +413,18 @@ Table of Contents
 
    *  Specification Document(s): Section 3.9 of this specification
 
-8.1.10.  "uv" Method
+8.1.10.  "mdc" Method
+
+   *  Authentication Method Reference Name: mdc
+
+   *  Authentication Method Reference Description: Multi-Device
+      Credential
+
+   *  Change Controller: IETF
+
+   *  Specification Document(s): Section 3.10 of this specification
+
+8.1.11.  "uv" Method
 
    *  Authentication Method Reference Name: uv
 
@@ -401,9 +432,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.10 of this specification
+   *  Specification Document(s): Section 3.11 of this specification
 
-8.1.11.  "tel" Method
+8.1.12.  "tel" Method
 
    *  Authentication Method Reference Name: tel
 
@@ -548,6 +579,10 @@ Appendix B.  Common Compositions
    Device-bound passkey held in hardware, such as on a security key:
       ["passkey", "hwk"]
 
+   Synced passkey:
+      ["passkey", "mdc"]. "hwk" or "swk" is added where the issuer knows
+      how the key is protected.
+
 Acknowledgments
 
    We would like to thank Jean Diaconu, Max Gerber, and Rob Zagarella
@@ -561,6 +596,9 @@ Document History
 
    *  Added "sna" for silent network authentication, a specific case of
       the background authentication described by "bg".
+
+   *  Added "mdc" for multi-device credentials, commonly called synced
+      passkeys, which composes with "hwk" and "swk" [RFC8176].
 
    *  Added "uv" for user verification, distinct from the user presence
       test described by "user" [RFC8176].
