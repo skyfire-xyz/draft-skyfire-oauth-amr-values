@@ -6,11 +6,11 @@ Web Authorization Protocol                                    A. Agarwal
 Internet-Draft                                      Skyfire Systems Inc.
 Updates: 8176 (if approved)                                     M. Jones
 Intended status: Standards Track                  Self-Issued Consulting
-Expires: 5 April 2027                                             N. Ali
+Expires: 30 April 2027                                            N. Ali
                                                                 Experian
                                                                S. Thumma
                                                                   Akamai
-                                                          2 October 2026
+                                                         27 October 2026
 
 
            Additional Authentication Method Reference Values
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 April 2027.
+   This Internet-Draft will expire on 30 April 2027.
 
 Copyright Notice
 
@@ -74,32 +74,37 @@ Table of Contents
    3.  Authentication Method Reference Values
      3.1.  "app" (Authenticator App) Method
      3.2.  "bg" (Background Authentication) Method
-     3.3.  "email" (Code or link sent to e-mail) Method
-     3.4.  "code" (Code provided to and entered by user) Method
-     3.5.  "url" (URL provided to and clicked on by user) Method
-     3.6.  "push" (Push notification to mobile phone) Method
-     3.7.  "facliv" (Facial Recognition with Liveness Check) Method
-     3.8.  "sqa" (Security Question Answers) Method
+     3.3.  "sna" (Silent Network Authentication) Method
+     3.4.  "email" (E-mail Channel) Method
+     3.5.  "code" (Code provided to and entered by user) Method
+     3.6.  "url" (URL provided to and clicked on by user) Method
+     3.7.  "push" (Push notification to mobile phone) Method
+     3.8.  "facliv" (Facial Liveness Check) Method
      3.9.  "passkey" (Passkey) Method
+     3.10. "uv" (User Verification) Method
    4.  Updated Authentication Method Reference Value
      4.1.  "tel" (Telephone Call) Method
-   5.  Security Considerations
-   6.  Privacy Considerations
-   7.  IANA Considerations
-     7.1.  Authentication Method References Registry
-       7.1.1.  "app" Method
-       7.1.2.  "bg" Method
-       7.1.3.  "email" Method
-       7.1.4.  "code" Method
-       7.1.5.  "url" Method
-       7.1.6.  "push" Method
-       7.1.7.  "facliv" Method
-       7.1.8.  "sqa" Method
-       7.1.9.  "passkey" Method
-       7.1.10. "tel" Method
-   8.  References
-     8.1.  Normative References
-     8.2.  Informative References
+   5.  Composing Authentication Method Reference Values
+   6.  Security Considerations
+   7.  Privacy Considerations
+   8.  IANA Considerations
+     8.1.  Authentication Method References Registry
+       8.1.1.  "app" Method
+       8.1.2.  "bg" Method
+       8.1.3.  "sna" Method
+       8.1.4.  "email" Method
+       8.1.5.  "code" Method
+       8.1.6.  "url" Method
+       8.1.7.  "push" Method
+       8.1.8.  "facliv" Method
+       8.1.9.  "passkey" Method
+       8.1.10. "uv" Method
+       8.1.11. "tel" Method
+   9.  References
+     9.1.  Normative References
+     9.2.  Informative References
+   Appendix A.  Examples
+   Appendix B.  Common Compositions
    Acknowledgments
    Document History
    Authors' Addresses
@@ -138,8 +143,11 @@ Table of Contents
 3.1.  "app" (Authenticator App) Method
 
    app:
-      Authenticator App (e.g., Okta Verify, Google Authenticator,
-      Microsoft Authenticator)
+      Use of an authenticator application on a device held by the user.
+      An issuer includes this value where it knows that an authenticator
+      application was used.  Where a code is produced from a shared
+      secret and the issuer cannot determine what produced it, this
+      value is omitted.
 
 3.2.  "bg" (Background Authentication) Method
 
@@ -147,40 +155,76 @@ Table of Contents
       Background Authentication (Silent network authentication of phone
       number, device recognition, geo-location, etc.)
 
-3.3.  "email" (Code or link sent to e-mail) Method
+      The "sna" value (Section 3.3) identifies one specific background
+      method and is a subset of this value.  Geo-location is separately
+      registered as "geo" and device recognition is within the scope of
+      "rba", both in [RFC8176].
+
+3.3.  "sna" (Silent Network Authentication) Method
+
+   sna:
+      Silent Network Authentication.  Confirmation by the mobile network
+      operator that the device making the request holds the subscriber
+      identity associated with a given telephone number, performed
+      without any interaction with the user.
+
+3.4.  "email" (E-mail Channel) Method
 
    email:
-      Use of code or link sent to e-mail
+      Use of e-mail as the channel by which an authentication
+      interaction reached the user.  What was delivered over the channel
+      is described by an accompanying value such as "code" or "url".
+      See Section 5.
 
-3.4.  "code" (Code provided to and entered by user) Method
+3.5.  "code" (Code provided to and entered by user) Method
 
    code:
       Code provided to and entered by user
 
-3.5.  "url" (URL provided to and clicked on by user) Method
+3.6.  "url" (URL provided to and clicked on by user) Method
 
    url:
       URL provided to and clicked on by user
 
-3.6.  "push" (Push notification to mobile phone) Method
+3.7.  "push" (Push notification to mobile phone) Method
 
    push:
       Push notification to mobile phone
 
-3.7.  "facliv" (Facial Recognition with Liveness Check) Method
+3.8.  "facliv" (Facial Liveness Check) Method
 
    facliv:
-      Facial Recognition with Liveness Check
+      Determination that a facial image or video presented for
+      authentication is of a live person rather than an artifact such as
+      a photograph, mask, or synthetic rendering.  This is a
+      presentation attack detection measure [ISO30107-1].
 
-3.8.  "sqa" (Security Question Answers) Method
-
-   sqa:
-      Security Question Answers
+      The "facliv" and "face" [RFC8176] values describe different
+      determinations and are not alternatives: "face" is a comparison of
+      a presented face against a reference, and "facliv" is a
+      determination that the presented face is live.  Where both were
+      performed, both values are included.
 
 3.9.  "passkey" (Passkey) Method
 
    passkey:
-      Passkey
+      A passkey, that is, a client-side discoverable credential as
+      defined by [WebAuthn].
+
+3.10.  "uv" (User Verification) Method
+
+   uv:
+      User verification.  Local authorization of the authenticator by an
+      authorization gesture capable of distinguishing individual users,
+      such as a PIN, a password, or biometric recognition [WebAuthn].
+
+      This is distinct from "user" [RFC8176], which is a test of user
+      presence.  As [WebAuthn] states, a user presence test "is not
+      capable of biometric recognition, nor does it involve the
+      presentation of a shared secret such as a password or PIN".
+
+      This value does not identify which modality the authenticator
+      used.
 
 4.  Updated Authentication Method Reference Value
 
@@ -201,28 +245,59 @@ Table of Contents
    authentication technique is sometimes also referred to as 'call back'
    [RFC4949]."
 
-5.  Security Considerations
+5.  Composing Authentication Method Reference Values
+
+   The "amr" claim value is an array, and as described in [RFC8176], all
+   the applicable values may be returned.  A single authentication event
+   is frequently described by more than one value, because the
+   registered values describe different aspects of it.
+
+   The "email" and "push" values registered by this specification
+   describe the channel by which an authentication interaction reached
+   the person.  [RFC8176] registers "sms" and "tel" in the same sense,
+   and uses the term "channel" in this sense in its definition of "mca".
+
+   The "code" and "url" values describe challenges delivered over such a
+   channel, which the person must return to the verifier to complete
+   authentication.  The person may return it directly, as when a code is
+   read and typed in, or indirectly, as when following a link causes the
+   value to be sent.  The "otp" value [RFC8176] is related but narrower:
+   it identifies a one-time password produced by an algorithm such as
+   HOTP [RFC4226] or TOTP [RFC6238], typically generated by an
+   authenticator rather than delivered over a channel.  A code not
+   produced by such an algorithm is described by "code".
+
+   A channel value alone does not say what the person did.  A challenge
+   value alone does not say how it reached them.  An issuer that knows
+   both will typically return both.  Appendix A gives examples, and
+   Appendix B maps terms in common industry use onto the corresponding
+   sets of values.
+
+   The "sms" value registered by [RFC8176] predates this distinction.
+   Its definition describes both a channel and the interaction carried
+   over it, and is unchanged by this specification.  An issuer wishing
+   to be explicit about what was delivered over the SMS channel may
+   return a challenge value alongside it.
+
+6.  Security Considerations
 
    The security considerations defined in Authentication Method
    Reference Values [RFC8176] apply to this specification.
 
-   Note that security questions are not acceptable authentication
-   secrets under current NIST guidance [SP800-63-4].
-
-6.  Privacy Considerations
+7.  Privacy Considerations
 
    The privacy considerations defined in Authentication Method Reference
    Values [RFC8176] apply to this specification.
 
-7.  IANA Considerations
+8.  IANA Considerations
 
-7.1.  Authentication Method References Registry
+8.1.  Authentication Method References Registry
 
    This specification registers the following Authentication Method
    Reference values in the IANA "Authentication Method Reference Values"
    registry [IANA.AMR] established by [RFC8176].
 
-7.1.1.  "app" Method
+8.1.1.  "app" Method
 
    *  Authentication Method Reference Name: app
 
@@ -232,7 +307,7 @@ Table of Contents
 
    *  Specification Document(s): Section 3.1 of this specification
 
-7.1.2.  "bg" Method
+8.1.2.  "bg" Method
 
    *  Authentication Method Reference Name: bg
 
@@ -243,18 +318,29 @@ Table of Contents
 
    *  Specification Document(s): Section 3.2 of this specification
 
-7.1.3.  "email" Method
+8.1.3.  "sna" Method
 
-   *  Authentication Method Reference Name: email
+   *  Authentication Method Reference Name: sna
 
-   *  Authentication Method Reference Description: Code or link sent to
-      e-mail
+   *  Authentication Method Reference Description: Silent Network
+      Authentication
 
    *  Change Controller: IETF
 
    *  Specification Document(s): Section 3.3 of this specification
 
-7.1.4.  "code" Method
+8.1.4.  "email" Method
+
+   *  Authentication Method Reference Name: email
+
+   *  Authentication Method Reference Description: Use of e-mail as the
+      channel for an authentication interaction
+
+   *  Change Controller: IETF
+
+   *  Specification Document(s): Section 3.4 of this specification
+
+8.1.5.  "code" Method
 
    *  Authentication Method Reference Name: code
 
@@ -263,9 +349,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.4 of this specification
+   *  Specification Document(s): Section 3.5 of this specification
 
-7.1.5.  "url" Method
+8.1.6.  "url" Method
 
    *  Authentication Method Reference Name: url
 
@@ -274,9 +360,9 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.5 of this specification
+   *  Specification Document(s): Section 3.6 of this specification
 
-7.1.6.  "push" Method
+8.1.7.  "push" Method
 
    *  Authentication Method Reference Name: push
 
@@ -285,31 +371,19 @@ Table of Contents
 
    *  Change Controller: IETF
 
-   *  Specification Document(s): Section 3.6 of this specification
+   *  Specification Document(s): Section 3.7 of this specification
 
-7.1.7.  "facliv" Method
+8.1.8.  "facliv" Method
 
    *  Authentication Method Reference Name: facliv
 
-   *  Authentication Method Reference Description: Facial Recognition
-      with Liveness Check
-
-   *  Change Controller: IETF
-
-   *  Specification Document(s): Section 3.7 of this specification
-
-7.1.8.  "sqa" Method
-
-   *  Authentication Method Reference Name: sqa
-
-   *  Authentication Method Reference Description: Security Question
-      Answers
+   *  Authentication Method Reference Description: Facial Liveness Check
 
    *  Change Controller: IETF
 
    *  Specification Document(s): Section 3.8 of this specification
 
-7.1.9.  "passkey" Method
+8.1.9.  "passkey" Method
 
    *  Authentication Method Reference Name: passkey
 
@@ -319,7 +393,17 @@ Table of Contents
 
    *  Specification Document(s): Section 3.9 of this specification
 
-7.1.10.  "tel" Method
+8.1.10.  "uv" Method
+
+   *  Authentication Method Reference Name: uv
+
+   *  Authentication Method Reference Description: User Verification
+
+   *  Change Controller: IETF
+
+   *  Specification Document(s): Section 3.10 of this specification
+
+8.1.11.  "tel" Method
 
    *  Authentication Method Reference Name: tel
 
@@ -330,9 +414,9 @@ Table of Contents
 
    *  Specification Document(s): Section 4.1 of this specification
 
-8.  References
+9.  References
 
-8.1.  Normative References
+9.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -347,18 +431,24 @@ Table of Contents
               Method Reference Values", RFC 8176, DOI 10.17487/RFC8176,
               June 2017, <https://www.rfc-editor.org/rfc/rfc8176>.
 
-8.2.  Informative References
+9.2.  Informative References
 
    [I-D.skyfire-oauth-kyapay-token]
               Agarwal, A. and M. B. Jones, "KYAPay Token", Work in
               Progress, Internet-Draft, draft-skyfire-oauth-kyapay-
-              token-01, 19 July 2026,
+              token-02, 1 October 2026,
               <https://datatracker.ietf.org/doc/html/draft-skyfire-
-              oauth-kyapay-token-01>.
+              oauth-kyapay-token-02>.
 
    [IANA.AMR] IANA, "Authentication Method Reference Values",
               <https://www.iana.org/assignments/authentication-method-
               reference-values>.
+
+   [ISO30107-1]
+              International Organization for Standardization,
+              "Information technology - Biometric presentation attack
+              detection - Part 1: Framework", ISO/IEC 30107-1:2023,
+              2023, <https://www.iso.org/standard/83828.html>.
 
    [OpenID.Core]
               Sakimura, N., Bradley, J., Jones, M. B., Medeiros, B. de.,
@@ -366,27 +456,138 @@ Table of Contents
               errata set 2", 15 December 2023,
               <https://openid.net/specs/openid-connect-core-1_0.html>.
 
+   [RFC4226]  M'Raihi, D., Bellare, M., Hoornaert, F., Naccache, D., and
+              O. Ranen, "HOTP: An HMAC-Based One-Time Password
+              Algorithm", RFC 4226, DOI 10.17487/RFC4226, December 2005,
+              <https://www.rfc-editor.org/rfc/rfc4226>.
+
    [RFC4949]  Shirey, R., "Internet Security Glossary, Version 2",
               FYI 36, RFC 4949, DOI 10.17487/RFC4949, August 2007,
               <https://www.rfc-editor.org/rfc/rfc4949>.
+
+   [RFC6238]  M'Raihi, D., Machani, S., Pei, M., and J. Rydell, "TOTP:
+              Time-Based One-Time Password Algorithm", RFC 6238,
+              DOI 10.17487/RFC6238, May 2011,
+              <https://www.rfc-editor.org/rfc/rfc6238>.
 
    [RFC7519]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web Token
               (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015,
               <https://www.rfc-editor.org/rfc/rfc7519>.
 
-   [SP800-63-4]
-              National Institute of Standards (NIST), "NIST SP 800-63-4:
-              Digital Identity Guidelines", July 2025,
-              <https://pages.nist.gov/800-63-4/sp800-63.html>.
+   [WebAuthn] Cappalli, T., Kumar, A., Lundberg, E., Miller, M., Pascoe,
+              and N. Satragno, "Web Authentication: An API for accessing
+              Public Key Credentials - Level 3", W3C Recommendation, 25
+              August 2026,
+              <https://www.w3.org/TR/2026/REC-webauthn-3-20260825/>.
+
+Appendix A.  Examples
+
+   The following "amr" claim value indicates that a code was sent to the
+   user over the e-mail channel and entered by the user:
+
+   "amr": ["email", "code"]
+
+   The following "amr" claim value indicates that a link was sent to the
+   user over the e-mail channel and followed by the user:
+
+   "amr": ["email", "url"]
+
+   The following "amr" claim value indicates that a one-time password
+   was generated by an authenticator application and entered by the
+   user:
+
+   "amr": ["app", "otp"]
+
+   The following "amr" claim value indicates that a password was used
+   together with a code sent over the e-mail channel, and that the
+   issuer considers the combination to be multiple-factor
+   authentication:
+
+   "amr": ["pwd", "email", "code", "mfa"]
+
+Appendix B.  Common Compositions
+
+   The terms below are names in common industry use for authentication
+   arrangements that this specification describes using more than one
+   value.  This mapping is non-normative.  It is provided so that
+   implementers of the same arrangement emit the same set of values.
+
+   Email one-time code, also called email OTP:
+      ["email", "code"]
+
+   Magic link, also called e-mail link sign-in:
+      ["email", "url"]
+
+   SMS one-time code:
+      ["sms", "code"].  As noted in Section 5, "sms" predates the
+      channel and challenge distinction, and ["sms"] remains correct.
+
+   Voice one-time code, where a call conveys a code that the user
+   then enters:
+      ["tel", "code"]
+
+   Call-back confirmation, where the user confirms during the call
+   itself:
+      ["tel"]
+
+   Authenticator application one-time password:
+      ["app", "otp"]
+
+   Push approval:
+      ["push"]
+
+   Push approval with number matching:
+      ["push", "code"]
+
+   Silent network authentication:
+      ["sna"]
+
+   Facial recognition with a liveness check:
+      ["face", "facliv"]
+
+   Device-bound passkey held in hardware, such as on a security key:
+      ["passkey", "hwk"]
 
 Acknowledgments
 
-   We would like to thank Jean Diaconu and Rob Zagarella for their
-   contributions to the specification.
+   We would like to thank Jean Diaconu, Max Gerber, and Rob Zagarella
+   for their contributions to the specification.
 
 Document History
 
    [[ to be removed by the RFC Editor before publication as an RFC ]]
+
+   -03
+
+   *  Added "sna" for silent network authentication, a specific case of
+      the background authentication described by "bg".
+
+   *  Added "uv" for user verification, distinct from the user presence
+      test described by "user" [RFC8176].
+
+   *  Redefined "app" by the property it describes rather than by
+      product examples, and stated when an issuer can assert it.
+
+   *  Narrowed "email" to the channel, with what was delivered over it
+      described by an accompanying value.
+
+   *  Stated that "facliv" and "face" [RFC8176] describe different
+      determinations and are included together where both were
+      performed, and added a reference to [ISO30107-1].
+
+   *  Added a reference for "passkey" to [WebAuthn].
+
+   *  Added a section on composing values, and appendices giving
+      examples and common compositions.
+
+   *  Removed "sqa".  Current NIST guidance treats knowledge-based
+      authentication and security questions as the same family, and
+      "kba" [RFC8176] already covers it.
+
+   *  Removed the Security Considerations note on security questions,
+      which applied to "sqa".
+
+   *  Added Max Gerber to the acknowledgments.
 
    -02
 
