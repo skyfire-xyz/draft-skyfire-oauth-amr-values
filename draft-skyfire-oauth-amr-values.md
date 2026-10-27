@@ -102,7 +102,7 @@ informative:
     seriesinfo:
       "NIST Special Publication": "800-63B-4"
   CAMARA.NumberVerification:
-    target: https://github.com/camaraproject/NumberVerification
+    target: https://github.com/camaraproject/NumberVerification/blob/r3.2/code/API_definitions/number-verification.yaml
     title: "Number Verification API, version 2.1.0"
     author:
       - org: CAMARA Project
