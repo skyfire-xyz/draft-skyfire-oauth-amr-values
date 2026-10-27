@@ -213,6 +213,24 @@ facliv:
 passkey:
 : A passkey, that is, a client-side discoverable credential as defined by {{WebAuthn}}.
 
+## "mdc" (Multi-Device Credential) Method {#mdcMethod}
+
+{:vspace}
+mdc:
+: Use of a multi-device credential as defined by {{WebAuthn}},
+  that is, a backup-eligible credential,
+  which may be backed up and synchronized to other devices.
+  Multi-device credentials are commonly referred to as synced passkeys.
+  A WebAuthn Relying Party learns whether a credential is backup eligible
+  from the flags in the authenticator data.
+
+  This value describes whether a credential may be replicated.
+  It is independent of how the key is protected on any one device,
+  which "hwk" and "swk" {{RFC8176}} describe.
+  Where both are known, both are included.
+
+  The absence of this value does not indicate that a credential is a single-device credential.
+
 ## "uv" (User Verification) Method {#uvMethod}
 
 {:vspace}
@@ -368,6 +386,13 @@ established by {{RFC8176}}.
 * Change Controller: IETF
 * Specification Document(s): {{passkeyMethod}} of this specification
 
+### "mdc" Method
+
+* Authentication Method Reference Name: mdc
+* Authentication Method Reference Description: Multi-Device Credential
+* Change Controller: IETF
+* Specification Document(s): {{mdcMethod}} of this specification
+
 ### "uv" Method
 
 * Authentication Method Reference Name: uv
@@ -459,6 +484,10 @@ Facial recognition with a liveness check:
 Device-bound passkey held in hardware, such as on a security key:
 : `["passkey", "hwk"]`
 
+Synced passkey:
+: `["passkey", "mdc"]`.
+  "hwk" or "swk" is added where the issuer knows how the key is protected.
+
 # Acknowledgments
 {: numbered="false"}
 
@@ -478,6 +507,7 @@ for their contributions to the specification.
 -03
 
 * Added "sna" for silent network authentication, a specific case of the background authentication described by "bg".
+* Added "mdc" for multi-device credentials, commonly called synced passkeys, which composes with "hwk" and "swk" {{RFC8176}}.
 * Added "uv" for user verification, distinct from the user presence test described by "user" {{RFC8176}}.
 * Redefined "app" by the property it describes rather than by product examples, and stated when an issuer can assert it.
 * Narrowed "email" to the channel, with what was delivered over it described by an accompanying value.
