@@ -1056,7 +1056,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Agarwal, et al.</td>
-<td class="center">Expires 30 April 2027</td>
+<td class="center">Expires 1 May 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1072,12 +1072,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc8176" class="eref">8176</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-10-27" class="published">27 October 2026</time>
+<time datetime="2026-10-28" class="published">28 October 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-04-30">30 April 2027</time></dd>
+<dd class="expires"><time datetime="2027-05-01">1 May 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1138,7 +1138,7 @@ authentication methods in use today.<a href="#section-abstract-1" class="pilcrow
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 30 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 1 May 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1355,6 +1355,9 @@ An issuer includes this value where it knows that an authenticator application w
 Where a code is produced from a shared secret
 and the issuer cannot determine what produced it,
 this value is omitted.<a href="#section-3.1-1.2.1" class="pilcrow">¶</a></p>
+<p id="section-3.1-1.2.2">An authenticator application commonly acts as an OTP authenticator
+or as an out-of-band authenticator,
+as described in Sections 3.1.3 to 3.1.5 of <span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span>.<a href="#section-3.1-1.2.2" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1390,7 +1393,8 @@ both in <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<a href=
             <p id="section-3.3-1.2.1">Silent Network Authentication.
 Confirmation by the mobile network operator that the device making the request
 holds the subscriber identity associated with a given telephone number,
-performed without any interaction with the user.<a href="#section-3.3-1.2.1" class="pilcrow">¶</a></p>
+performed without any interaction with the user.
+An example is the Number Verification API <span>[<a href="#CAMARA.NumberVerification" class="cite xref">CAMARA.NumberVerification</a>]</span>.<a href="#section-3.3-1.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1408,6 +1412,9 @@ performed without any interaction with the user.<a href="#section-3.3-1.2.1" cla
 What was delivered over the channel is described by an accompanying value
 such as "code" or "url".
 See <a href="#composing" class="auto internal xref">Section 5</a>.<a href="#section-3.4-1.2.1" class="pilcrow">¶</a></p>
+<p id="section-3.4-1.2.2">E-mail is not an acceptable channel for out-of-band authentication
+under Section 3.1.3.1 of <span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span>.
+See <a href="#security" class="auto internal xref">Section 6</a>.<a href="#section-3.4-1.2.2" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1422,6 +1429,9 @@ See <a href="#composing" class="auto internal xref">Section 5</a>.<a href="#sect
           <dt id="section-3.5-1.1">code:</dt>
           <dd style="margin-left: 1.5em" id="section-3.5-1.2">
             <p id="section-3.5-1.2.1">Code provided to and entered by user<a href="#section-3.5-1.2.1" class="pilcrow">¶</a></p>
+<p id="section-3.5-1.2.2">For example, a secret received on an out-of-band device
+and entered into the authentication session,
+as described in Section 3.1.3 of <span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span>.<a href="#section-3.5-1.2.2" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1450,6 +1460,9 @@ See <a href="#composing" class="auto internal xref">Section 5</a>.<a href="#sect
           <dt id="section-3.7-1.1">push:</dt>
           <dd style="margin-left: 1.5em" id="section-3.7-1.2">
             <p id="section-3.7-1.2.1">Push notification to mobile phone<a href="#section-3.7-1.2.1" class="pilcrow">¶</a></p>
+<p id="section-3.7-1.2.2">An out-of-band authentication interaction in which the verifier reaches
+an application on the user's device over a secondary channel,
+as described in Section 3.1.3 of <span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span>.<a href="#section-3.7-1.2.2" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1600,7 +1613,7 @@ An issuer wishing to be explicit about what was delivered over the SMS channel
 may return a challenge value alongside it.<a href="#section-5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="security-considerations">
+<div id="security">
 <section id="section-6">
       <h2 id="name-security-considerations">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
@@ -1608,6 +1621,18 @@ may return a challenge value alongside it.<a href="#section-5-5" class="pilcrow"
 <p id="section-6-1">The security considerations defined in
 Authentication Method Reference Values <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>
 apply to this specification.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">E-mail is not an acceptable channel for out-of-band authentication
+under Section 3.1.3.1 of <span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span>,
+because an e-mail account may be accessible with only a password
+and messages may be intercepted or rerouted.
+A relying party evaluating an "amr" claim that includes "email"
+may wish to take this into account.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-3"><span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span> also no longer accepts out-of-band authentication
+in which the user approves a request on the secondary channel
+without transferring a secret between the channels,
+because of authentication fatigue attacks.
+The "push" value alone does not indicate whether a secret was transferred.
+An issuer that knows a code was transferred returns "code" alongside it.<a href="#section-6-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="privacy-considerations">
@@ -1922,6 +1947,10 @@ established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<
 <a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
+<dt id="CAMARA.NumberVerification">[CAMARA.NumberVerification]</dt>
+        <dd>
+<span class="refAuthor">CAMARA Project</span>, <span class="refTitle">"Number Verification API, version 2.1.0"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://github.com/camaraproject/NumberVerification/blob/r3.2/code/API_definitions/number-verification.yaml">https://github.com/camaraproject/NumberVerification/blob/r3.2/code/API_definitions/number-verification.yaml</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="I-D.skyfire-oauth-kyapay-token">[I-D.skyfire-oauth-kyapay-token]</dt>
         <dd>
 <span class="refAuthor">Agarwal, A.</span> and <span class="refAuthor">M. B. Jones</span>, <span class="refTitle">"KYAPay Token"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-skyfire-oauth-kyapay-token-02</span>, <time datetime="2026-10-01" class="refDate">1 October 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-skyfire-oauth-kyapay-token-02">https://datatracker.ietf.org/doc/html/draft-skyfire-oauth-kyapay-token-02</a>&gt;</span>. </dd>
@@ -1933,6 +1962,10 @@ established by <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span>.<
 <dt id="ISO30107-1">[ISO30107-1]</dt>
         <dd>
 <span class="refAuthor">International Organization for Standardization</span>, <span class="refTitle">"Information technology - Biometric presentation attack detection - Part 1: Framework"</span>, <span class="seriesInfo">ISO/IEC 30107-1:2023</span>, <time datetime="2023" class="refDate">2023</time>, <span>&lt;<a href="https://www.iso.org/standard/83828.html">https://www.iso.org/standard/83828.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="NIST.SP.800-63B-4">[NIST.SP.800-63B-4]</dt>
+        <dd>
+<span class="refAuthor">National Institute of Standards and Technology</span>, <span class="refTitle">"Digital Identity Guidelines: Authentication and Authenticator Management"</span>, <span class="seriesInfo">NIST Special Publication 800-63B-4</span>, <time datetime="2025-08" class="refDate">August 2025</time>, <span>&lt;<a href="https://pages.nist.gov/800-63-4/sp800-63b.html">https://pages.nist.gov/800-63-4/sp800-63b.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="OpenID.Core">[OpenID.Core]</dt>
         <dd>
@@ -2118,16 +2151,22 @@ for their contributions to the specification.<a href="#appendix-C-1" class="pilc
           <p id="appendix-D-3.7.1">Added a reference for "passkey" to <span>[<a href="#WebAuthn" class="cite xref">WebAuthn</a>]</span>.<a href="#appendix-D-3.7.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.8">
-          <p id="appendix-D-3.8.1">Added a section on composing values, and appendices giving examples and common compositions.<a href="#appendix-D-3.8.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.8.1">Added references to <span>[<a href="#NIST.SP.800-63B-4" class="cite xref">NIST.SP.800-63B-4</a>]</span> for "app", "code", "push", and "email", and to <span>[<a href="#CAMARA.NumberVerification" class="cite xref">CAMARA.NumberVerification</a>]</span> for "sna".<a href="#appendix-D-3.8.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.9">
-          <p id="appendix-D-3.9.1">Removed "sqa". Current NIST guidance treats knowledge-based authentication and security questions as the same family, and "kba" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> already covers it.<a href="#appendix-D-3.9.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.9.1">Added Security Considerations on e-mail as an authentication channel and on push approval without a transferred secret.<a href="#appendix-D-3.9.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.10">
-          <p id="appendix-D-3.10.1">Removed the Security Considerations note on security questions, which applied to "sqa".<a href="#appendix-D-3.10.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.10.1">Added a section on composing values, and appendices giving examples and common compositions.<a href="#appendix-D-3.10.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-D-3.11">
-          <p id="appendix-D-3.11.1">Added Max Gerber to the acknowledgments.<a href="#appendix-D-3.11.1" class="pilcrow">¶</a></p>
+          <p id="appendix-D-3.11.1">Removed "sqa". Current NIST guidance treats knowledge-based authentication and security questions as the same family, and "kba" <span>[<a href="#RFC8176" class="cite xref">RFC8176</a>]</span> already covers it.<a href="#appendix-D-3.11.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-D-3.12">
+          <p id="appendix-D-3.12.1">Removed the Security Considerations note on security questions, which applied to "sqa".<a href="#appendix-D-3.12.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-D-3.13">
+          <p id="appendix-D-3.13.1">Added Max Gerber to the acknowledgments.<a href="#appendix-D-3.13.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="appendix-D-4">-02<a href="#appendix-D-4" class="pilcrow">¶</a></p>
