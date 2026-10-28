@@ -93,6 +93,20 @@ informative:
     date: 2023
     seriesinfo:
       "ISO/IEC": "30107-1:2023"
+  NIST.SP.800-63B-4:
+    target: https://pages.nist.gov/800-63-4/sp800-63b.html
+    title: "Digital Identity Guidelines: Authentication and Authenticator Management"
+    author:
+      - org: National Institute of Standards and Technology
+    date: 2025-08
+    seriesinfo:
+      "NIST Special Publication": "800-63B-4"
+  CAMARA.NumberVerification:
+    target: https://github.com/camaraproject/NumberVerification/blob/r3.2/code/API_definitions/number-verification.yaml
+    title: "Number Verification API, version 2.1.0"
+    author:
+      - org: CAMARA Project
+    date: 2025
 
 ...
 
@@ -144,6 +158,10 @@ app:
   and the issuer cannot determine what produced it,
   this value is omitted.
 
+  An authenticator application commonly acts as an OTP authenticator
+  or as an out-of-band authenticator,
+  as described in Sections 3.1.3 to 3.1.5 of {{NIST.SP.800-63B-4}}.
+
 ## "bg" (Background Authentication) Method {#bgMethod}
 
 {:vspace}
@@ -164,6 +182,7 @@ sna:
   Confirmation by the mobile network operator that the device making the request
   holds the subscriber identity associated with a given telephone number,
   performed without any interaction with the user.
+  An example is the Number Verification API {{CAMARA.NumberVerification}}.
 
 ## "email" (E-mail Channel) Method {#emailMethod}
 
@@ -174,11 +193,19 @@ email:
   such as "code" or "url".
   See {{composing}}.
 
+  E-mail is not an acceptable channel for out-of-band authentication
+  under Section 3.1.3.1 of {{NIST.SP.800-63B-4}}.
+  See {{security}}.
+
 ## "code" (Code provided to and entered by user) Method {#codeMethod}
 
 {:vspace}
 code:
 : Code provided to and entered by user
+
+  For example, a secret received on an out-of-band device
+  and entered into the authentication session,
+  as described in Section 3.1.3 of {{NIST.SP.800-63B-4}}.
 
 ## "url" (URL provided to and clicked on by user) Method {#urlMethod}
 
@@ -191,6 +218,10 @@ url:
 {:vspace}
 push:
 : Push notification to mobile phone
+
+  An out-of-band authentication interaction in which the verifier reaches
+  an application on the user's device over a secondary channel,
+  as described in Section 3.1.3 of {{NIST.SP.800-63B-4}}.
 
 ## "facliv" (Facial Liveness Check) Method {#faclivMethod}
 
@@ -300,11 +331,25 @@ An issuer wishing to be explicit about what was delivered over the SMS channel
 may return a challenge value alongside it.
 
 
-# Security Considerations
+# Security Considerations {#security}
 
 The security considerations defined in
 Authentication Method Reference Values {{RFC8176}}
 apply to this specification.
+
+E-mail is not an acceptable channel for out-of-band authentication
+under Section 3.1.3.1 of {{NIST.SP.800-63B-4}},
+because an e-mail account may be accessible with only a password
+and messages may be intercepted or rerouted.
+A relying party evaluating an "amr" claim that includes "email"
+may wish to take this into account.
+
+{{NIST.SP.800-63B-4}} also no longer accepts out-of-band authentication
+in which the user approves a request on the secondary channel
+without transferring a secret between the channels,
+because of authentication fatigue attacks.
+The "push" value alone does not indicate whether a secret was transferred.
+An issuer that knows a code was transferred returns "code" alongside it.
 
 
 # Privacy Considerations
@@ -513,6 +558,8 @@ for their contributions to the specification.
 * Narrowed "email" to the channel, with what was delivered over it described by an accompanying value.
 * Stated that "facliv" and "face" {{RFC8176}} describe different determinations and are included together where both were performed, and added a reference to {{ISO30107-1}}.
 * Added a reference for "passkey" to {{WebAuthn}}.
+* Added references to {{NIST.SP.800-63B-4}} for "app", "code", "push", and "email", and to {{CAMARA.NumberVerification}} for "sna".
+* Added Security Considerations on e-mail as an authentication channel and on push approval without a transferred secret.
 * Added a section on composing values, and appendices giving examples and common compositions.
 * Removed "sqa". Current NIST guidance treats knowledge-based authentication and security questions as the same family, and "kba" {{RFC8176}} already covers it.
 * Removed the Security Considerations note on security questions, which applied to "sqa".
