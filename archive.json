@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-10-29T00:35:42.191437+00:00",
+  "timestamp": "2026-11-05T00:30:50.550373+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -102,9 +102,17 @@
       "labels": [],
       "body": "From https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/pull/9:\n\n> When a single authentication event is described by more than one value, is it important that the consumer can determine which values correspond to which events? Does ordering of the `amr` claim have any intrinsic meaning? Suppose a user completes both an email magic link and a push-based code entry as part of authentication. Should amr be `[\"email\", \"url\", \"push\", \"code\"]` with an inherent `email -> url` and `push -> code` linking? Or would something like `[\"code\", \"url\", \"push\", \"email\"]` be acceptable as well?\n\nSome possible paths forward:\n\n1. Do nothing; keep `amr` an unordered set up for customer interpretation. Make this explicit within the draft.\n    * Pros:\n      * 100% backwards compatible, does not involve changing the definition of `amr`, simple for AS implementers\n    * Cons:\n      * Confusing for clients; unclear semantics for how to parse and combine values\n2. Drop \"modifier\" values such as `url` and `code` entirely and rely only on channel values\n    * Pros:\n      * 100% backwards compatible, does not involve changing the definition of `amr`, simple for AS implementers\n    * Cons:\n      * Modifier values such as `otp` and `code` are being requested by the industry, and we'd be unable to meet that request\n3. Introduce an inherent ordering semantic between `amr` values, transforming the array from a set to an ordered list\n    * Pros:\n      * Wire compatible, enables representation of simple relationships according to a set of parsing and intepretation rules \n    * Cons:\n      * Changes the definition of `amr` (in a backwards-compatible way, IMO)\n      * Cannot represent more complex relationships\n4. Define combinations of channel + modifier `amr` values like `email_otp` and `email_url` \n    * Pros:\n      * 100% backwards compatible, does not involve changing the definition of `amr`, simple for AS implementers\n    * Cons:\n      * Creates a combinatorial explosion of AMR values for the registry to manage\n      * Cannot represent more complex relationships\n5. Reach out to authors of OIDC Details [proposal](https://bredstone.github.io/oidc4ac/#name-amr-details-object)\n    * Pros:\n      * Seems like structured JSON is the best way to capture complex relationships + additional details about an authentication event\n    * Cons:\n      * Kind of feels like making the client _so_ aware of these details breaks a lot of abstraction layers that have historically been useful (IMO)\n      * Potential for additional protocol bloat\n\n",
       "createdAt": "2026-10-27T16:50:39Z",
-      "updatedAt": "2026-10-27T16:50:39Z",
+      "updatedAt": "2026-11-03T04:48:25Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "skyfire-ankit",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Context from Frederik Krogsdal Jacobsen on the OAuth list (28 Oct), for the alignment with OpenID4AC:\n\n- AB/Connect discussion of OpenID4AC, including feedback on how hard it is to represent authentication methods accurately, especially for negotiation:\n  https://lists.openid.net/pipermail/openid-specs-ab/2026-May/011316.html\n  https://lists.openid.net/pipermail/openid-specs-ab/2026-April/011284.html\n- Nat Sakimura's \"amr historical context\" thread: https://lists.openid.net/pipermail/openid-specs-ab/2026-April/011283.html\n- OpenID4AC at IIW 41 (proceedings pp. 224-227), and related discussion at IIW 42 (pp. 209-211) on describing the security properties of credentials rather than naming them (Pam Dingle, Dean Saxe).",
+          "createdAt": "2026-11-03T04:48:25Z",
+          "updatedAt": "2026-11-03T04:48:25Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -120,7 +128,7 @@
       "labels": [],
       "body": "Cc: @experian-nashali @sthumma33",
       "createdAt": "2026-07-13T22:17:04Z",
-      "updatedAt": "2026-07-14T16:20:43Z",
+      "updatedAt": "2026-11-03T04:11:36Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "5b0fc7979c045f47a71c7fed4d88d4c775999f1d",
@@ -202,7 +210,7 @@
       "labels": [],
       "body": "Cc: @experian-nashali",
       "createdAt": "2026-07-15T17:18:08Z",
-      "updatedAt": "2026-07-15T22:05:46Z",
+      "updatedAt": "2026-11-03T04:11:35Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "fc9a23e1b69030451f90346cd9b1bdb1f3dcc1a6",
@@ -244,7 +252,7 @@
       "labels": [],
       "body": "Moving to \"inp\" and \"vid\" to ID Verification spec, per today's call.",
       "createdAt": "2026-07-16T20:18:02Z",
-      "updatedAt": "2026-07-16T23:48:17Z",
+      "updatedAt": "2026-11-03T04:11:34Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "f90a216dd3d673f54e5d7dc890908c8851aa1c79",
@@ -286,7 +294,7 @@
       "labels": [],
       "body": "Per input from Nash during our call today",
       "createdAt": "2026-07-17T03:28:46Z",
-      "updatedAt": "2026-07-17T03:31:14Z",
+      "updatedAt": "2026-11-03T04:11:33Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "e644acad85c0c86d4399d6a54005323b2ea9094a",
@@ -328,7 +336,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2026-08-31T12:04:51Z",
-      "updatedAt": "2026-08-31T14:49:23Z",
+      "updatedAt": "2026-11-03T04:11:31Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "7d6831b3e46676911cdf4d96985abdbb7ba80a94",
@@ -370,7 +378,7 @@
       "labels": [],
       "body": "cc: @jadiaconu",
       "createdAt": "2026-09-17T15:11:06Z",
-      "updatedAt": "2026-09-30T17:56:01Z",
+      "updatedAt": "2026-11-03T04:11:30Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "49eab03f7a2cfa63356f0d88e6a93863a3a7db52",
@@ -724,7 +732,7 @@
       "labels": [],
       "body": "Stacked on #9. Retarget to `main` once #9 merges.\n\nThis follows up the passkey item in Max Gerber's review and Jean Diaconu's earlier point that device-bound and synced passkeys cannot be told apart with one flat value. The list reply of 18 October proposed one value on the replication axis, \"wording to follow\". This is the wording.\n\n**What it adds**\n\n- **\"mdc\"**: use of a multi-device credential as defined by WebAuthn Level 3, that is, a backup eligible credential, commonly called a synced passkey. A Relying Party learns this from the flags in the authenticator data.\n- Composition with \"hwk\" and \"swk\" from RFC 8176, which describe how a key is protected rather than whether it is replicated. Together they express all four combinations.\n- A Common Compositions row for synced passkeys.\n- IANA registration and Document History entry.\n\n**Why not \"swk\" for synced passkeys**\n\nOur earlier answer to Jean mapped synced passkeys to \"swk\". A synced passkey can be held in hardware-backed storage on each device it reaches, so \"software-secured\" is not reliably true, and the property a relying party needs here is replication, which \"hwk\" and \"swk\" do not describe.\n\n**Open for views**\n\n- The name. \"mdc\" follows WebAuthn's term.\n- The absence of \"mdc\" says nothing: an issuer that does not know whether a credential is backup eligible omits it. If relying parties need a positive single-device signal, that would be a second value. This PR does not propose one.\n\n@selfissued, views especially welcome given your WebAuthn background.",
       "createdAt": "2026-10-25T01:44:36Z",
-      "updatedAt": "2026-10-27T17:20:46Z",
+      "updatedAt": "2026-11-03T04:11:29Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "aa-max-review",
       "baseRefOid": "0300d1f4214b9cac06059fc801d101b750015c6b",
@@ -820,7 +828,7 @@
       "labels": [],
       "body": "Brings #10 into main. #10 was approved and merged on 27 October, but into the aa-max-review branch rather than main, because #9 had already merged.\n\nThis applies the same change to main: the \"mdc\" value, its IANA registration, the synced passkey row in Common Compositions, and the -03 Document History entry. The text is #10 as merged, including Mike's suggested edit. Nothing else changes.",
       "createdAt": "2026-10-27T18:12:33Z",
-      "updatedAt": "2026-10-27T18:14:00Z",
+      "updatedAt": "2026-11-03T04:11:27Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "ad2a596c6f2111b6818105ee2f0af8d314b8022e",
@@ -862,7 +870,7 @@
       "labels": [],
       "body": "Closes #6, from Jean Diaconu's review: every description was unsourced, unlike RFC 8176.\n\nAdds external sources for the values that had none:\n\n- \"app\", \"code\", \"push\": NIST SP 800-63B-4, Sections 3.1.3 to 3.1.5 (out-of-band and OTP authenticators).\n- \"email\": NIST SP 800-63B-4, Section 3.1.3.1, which does not permit e-mail for out-of-band authentication.\n- \"sna\": the CAMARA Number Verification API (release r3.2, API version 2.1.0).\n\nTwo values keep no external source because none exists. \"bg\" is defined here as an umbrella over \"sna\", \"geo\" and \"rba\". \"url\" is the link-based challenge commonly called a magic link. This specification is their defining text.\n\nSecurity Considerations gains two paragraphs: e-mail as an authentication channel, and NIST SP 800-63B-4 no longer accepting push approval without a transferred secret (\"push\" alone does not say whether one was transferred).",
       "createdAt": "2026-10-27T18:29:04Z",
-      "updatedAt": "2026-10-28T11:16:03Z",
+      "updatedAt": "2026-11-03T04:16:06Z",
       "baseRepository": "skyfire-xyz/draft-skyfire-oauth-amr-values",
       "baseRefName": "main",
       "baseRefOid": "abb467214b4b8422f9024a39b400bf88e35a09a4",
