@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-05T00:30:50.550373+00:00",
+  "timestamp": "2026-11-08T00:32:37.334176+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -113,6 +113,38 @@
           "updatedAt": "2026-11-03T04:48:25Z"
         }
       ]
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOTL-pLM8AAAABc4XEQg",
+      "title": "\"Device recognition\" in \"bg\" is too broad; consider a separate device identifier value",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/issues/14",
+      "state": "OPEN",
+      "author": "skyfire-ankit",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From Bjorn Hjelm's review on the OAuth list (28 Oct):\nhttps://mailarchive.ietf.org/arch/msg/oauth/sSl6hNHnFxQTN4GxIuVC9P55adk\n\n> \"Device recognition\" can mean a lot of things such as (IMEI check or lockup, IMEI-ICCID mapping, etc.) and a better reference would be \"device identifier\" and should be an independent value.\n\nRob Zagarella (@Schemo512) made a related point in his implementer review (item 3, 16 Sep): \"bg\" combines several distinct signals, so a relying party cannot tell which one occurred.\nhttps://mailarchive.ietf.org/arch/msg/oauth/Px1NpSn3OV3Dr6sJAiUM_Ar1rOs\n\nThe \"bg\" description lists device recognition as an example of background authentication, and the note says device recognition is within the scope of \"rba\" from RFC 8176.\n\nOptions:\n\n1. Register a new value for a check against a device identifier, such as an IMEI lookup or the IMEI to ICCID binding, and remove device recognition from the \"bg\" description.\n2. Keep device recognition under \"rba\", and remove it from the \"bg\" description.\n3. Leave the text as it is.\n",
+      "createdAt": "2026-11-05T22:53:29Z",
+      "updatedAt": "2026-11-05T22:53:29Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOTL-pLM8AAAABc4XJHQ",
+      "title": "Treat geo-location as context rather than a \"bg\" authentication method",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/issues/15",
+      "state": "OPEN",
+      "author": "skyfire-ankit",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From Bjorn Hjelm's review on the OAuth list (28 Oct):\nhttps://mailarchive.ietf.org/arch/msg/oauth/sSl6hNHnFxQTN4GxIuVC9P55adk\n\n> The use of geo-location (as defined in RFC 8176) should also be an independent value as exemplified in OpenID Connect MODRNA Authentication Profile Section. 5 to give context rather than a means of authentication.\n\nRob Zagarella (@Schemo512) raised the same risk in his implementer review (item 3, 16 Sep): a relying party may read \"bg\" as a possession factor when it was only a location match.\nhttps://mailarchive.ietf.org/arch/msg/oauth/Px1NpSn3OV3Dr6sJAiUM_Ar1rOs\n\nThe \"bg\" description lists geo-location as an example of background authentication, and the note points to \"geo\" in RFC 8176. The MODRNA Authentication Profile, Section 5, uses location as context for the request:\nhttps://openid.net/specs/openid-connect-modrna-authentication-1_0.html#rfc.section.5\n\nOptions:\n\n1. Remove geo-location from the \"bg\" description, keep the pointer to \"geo\", and say that location informs the issuer's decision but is not by itself an authentication method, citing the MODRNA Authentication Profile.\n2. Remove geo-location from the \"bg\" description and keep only the pointer to \"geo\".\n3. Leave the text as it is.\n",
+      "createdAt": "2026-11-05T22:53:35Z",
+      "updatedAt": "2026-11-05T22:53:35Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
