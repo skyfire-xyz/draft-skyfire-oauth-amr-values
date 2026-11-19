@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-08T00:32:37.334176+00:00",
+  "timestamp": "2026-11-19T00:30:35.006572+00:00",
   "repo": "skyfire-xyz/draft-skyfire-oauth-amr-values",
   "labels": [
     {
@@ -144,6 +144,22 @@
       "createdAt": "2026-11-05T22:53:35Z",
       "updatedAt": "2026-11-05T22:53:35Z",
       "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOTL-pLM8AAAABgNFu1A",
+      "title": "Omah lay Free My mind",
+      "url": "https://github.com/skyfire-xyz/draft-skyfire-oauth-amr-values/issues/16",
+      "state": "CLOSED",
+      "author": "queenmirabel082-tech",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-11-17T23:17:03Z",
+      "updatedAt": "2026-11-17T23:18:10Z",
+      "closedAt": "2026-11-17T23:18:10Z",
       "comments": []
     }
   ],
